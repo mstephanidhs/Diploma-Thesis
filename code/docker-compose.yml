@@ -42,5 +42,12 @@ services:
       - ./archive_encrypt:/archive
     #depends_on:
     #  - seiscomp
+
+  encryption:
+    container_name: encryption
+    build: ./encryption
+    # NEED TO FIX THE VOLUMES
+    # depends_on:
+    #   - slarchive
 volumes:
   mysql-data:
