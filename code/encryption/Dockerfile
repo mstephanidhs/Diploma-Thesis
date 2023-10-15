@@ -4,6 +4,12 @@ FROM python:3.8
 # Set the working directory
 WORKDIR /app
 
+# Create the archive directory inside the container
+RUN mkdir /app/archive
+
+# Create the archive_encrypt directory inside the container
+RUN mkdir /app/archive_encrypt
+
 # Copy monitoring and the encryption script and also the 
 # aes algorithm into the container
 COPY aes_gcm.py encrypt_data.py watch.py /app/

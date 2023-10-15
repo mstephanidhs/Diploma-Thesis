@@ -46,7 +46,9 @@ services:
   encryption:
     container_name: encryption
     build: ./encryption
-    # NEED TO FIX THE VOLUMES
+    volumes:
+      - ./archive:/app/archive
+      - ./archive_encrypt:/app/archive_encrypt
     # depends_on:
     #   - slarchive
 volumes:

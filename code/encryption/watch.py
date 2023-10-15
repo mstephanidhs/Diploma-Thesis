@@ -9,7 +9,7 @@ from watchdog.events import FileSystemEventHandler, FileDeletedEvent
 
 class OnMyWatch:
     # Set the directory on watch
-    watchDirectory = ".\..\\archive"
+    watchDirectory = "./archive"
 
     def __init__(self):
         self.observer = Observer()
@@ -34,9 +34,9 @@ class Handler(FileSystemEventHandler):
     @staticmethod
     def on_any_event(event):
         # The directory where the encrypted data will be stored
-        toSaveDirectory = ".\..\\archive_encrypt"
+        toSaveDirectory = "./archive_encrypt"
         # Location of the encryption script
-        encryptionScript = ".\encrypt_data.py"
+        encryptionScript = "./encrypt_data.py"
 
         # In case of the deletion event, do nothing
         if isinstance(event, FileDeletedEvent):
