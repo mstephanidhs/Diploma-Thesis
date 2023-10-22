@@ -43,13 +43,5 @@ services:
     #depends_on:
     #  - seiscomp
 
-  encryption:
-    container_name: encryption
-    build: ./encryption
-    volumes:
-      - ./archive:/app/archive
-      - ./archive_encrypt:/app/archive_encrypt
-    # depends_on:
-    #   - slarchive
 volumes:
   mysql-data:

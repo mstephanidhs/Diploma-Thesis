@@ -126,7 +126,7 @@ RUN sudo sed -i "s/^.*PasswordAuthentication.*$/PasswordAuthentication yes/" /et
 # Replaces the line with PermitRootLogin yes, effectively allowing the root user to log in directly via SSH.
 RUN sudo sed -i 's/#PermitRootLogin prohibit-password/PermitRootLogin yes/' /etc/ssh/sshd_config
 
-# Replaces that line with "X11Forwarding yes," effectively enabling X11 forwarding for SSH connections.
+# Replaces that line with "X11Forwarding yes," effectively enabling X11 /home/sysop/.seiscomp for SSH connections.
 RUN sudo sed -i "s/^.*X11Forwarding.*$/X11Forwarding yes/" /etc/ssh/sshd_config
 
 # Replaces that line with "X11UseLocalhost no," effectively disabling the use of localhost for X11 forwarding. 
