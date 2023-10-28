@@ -1,7 +1,5 @@
-from obspy.clients.seedlink.easyseedlink import EasySeedLinkClient
 
-# NEEDS FIXING
-# configure based on the server details I've built
+from obspy.clients.seedlink.easyseedlink import EasySeedLinkClient
 
 # Subclass the client class
 
@@ -16,13 +14,14 @@ class MyClient(EasySeedLinkClient):
 
 # Connect to a SeedLink server
 client = MyClient('localhost:18000')
+print("connected successfully")
 
 # Retrieve INFO:STREAMS
 streams_xml = client.get_info('STREAMS')
 print(streams_xml)
 
 # Select a stream and start receiving data
-client.select_stream('ZW', 'ITSC', 'EHZ')
+client.select_stream('ZW', 'ITSC', 'EHE')
 client.run()
 
 

@@ -20,7 +20,7 @@ class MyClient(EasySeedLinkClient):
             self.stream_xml = self.get_info('STREAMS')
             print(self.stream_xml)
 
-    # add stream to be processed
+    # Add stream to be processed
     def add_stream(self, net, sta, cha):
         # Select a stream and start receiving data
         self.select_stream(net, sta, cha)
