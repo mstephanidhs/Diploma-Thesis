@@ -37,13 +37,13 @@ class TraceProcessor:
 
         # Converts the dictionary into a JSON string witn an indentation of 2 spaces
         # Then, encodes the JSON string into bytes
-        return json.dumps(serializable_stats, index=2).encode()
+        return json.dumps(serializable_stats, indent=2).encode()
 
     def encrypt_trace(self, trace_data, trace_stats):
         # Using a delimiter in order to split the 2 parts afterwards
-        trace_combined = trace_stats + self.delmiter + trace_data
+        trace_combined = trace_stats + self.delimeter + trace_data
         # Create an instance of AES_GCM with the master key
-        my_gcm = AES_GCM(self.master)
+        my_gcm = AES_GCM(self.master_key)
         # encrypt the combined trace data and stats
         encrypted_trace, auth_tag = my_gcm.encrypt(
             self.init_value, trace_combined)
