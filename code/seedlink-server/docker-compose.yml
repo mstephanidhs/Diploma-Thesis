@@ -1,0 +1,12 @@
+version: '3.1'
+services:
+  seedlink:
+    container_name: seedlink
+    restart: always
+    build: ./seedlink
+    user: sysop
+    ports:
+      - '18000:18000'
+    volumes:
+      - ./seedlink:/seedlink
+      - ./archive:/archive
