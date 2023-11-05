@@ -1,5 +1,7 @@
 import socket
 from OpenSSL import SSL
+from Crypto.PublicKey import RSA
+from Crypto.Cipher import PKCS1_OAEP
 
 # Create a socket
 # socket.AF_INET: This specifies the address family to be used for the socket. In this case, it's AF_INET, which stands for IPv4. This means the socket will be used for Internet Protocol version 4 (IPv4) communication.
@@ -31,12 +33,39 @@ while True:
   
   try:
     ssl_socket.do_handshake()
+    print("Handshake was successful!")
     
-    # Secure data transfer
-    data = ssl_socket.recv(1024)
-    if data:
-      print(f"Received data from client: {data.decode('utf-8')}")
-      ssl_socket.send(b"Hello, client!")
+    # Send the server's public key to the client after the handshake
+    server_public_key = open('.\\server_cred\\server-cert.pem', 'rb').read()
+    ssl_socket.send(server_public_key)
+
+    
+    # Securely receive the client's encrypted master key and IV
+    encrypted_master_key = b''
+    encrypted_iv = b''
+
+    while len(encrypted_master_key) < 256:  # Assuming the encrypted master key is 256 bytes
+        data = ssl_socket.recv(256)
+        print("master_key", data)
+        if not data:
+            break
+        encrypted_master_key += data
+
+    while len(encrypted_iv) < 256:  # Assuming the encrypted IV is 256 bytes
+        data = ssl_socket.recv(256)
+        print("iv", data)
+        if not data:
+            break
+        encrypted_iv += data
+
+    # Decrypt the master key and IV using the server's private key
+    server_private_key = RSA.importKey(open('.\\server_cred\\server-key.pem').read())
+    cipher = PKCS1_OAEP.new(server_private_key)
+    master_key = cipher.decrypt(encrypted_master_key)
+    iv = cipher.decrypt(encrypted_iv)
+    
+    print(master_key)
+    print(iv)
     
   except SSL.Error as e:
     print(f"TLS handshake error: {e}")
