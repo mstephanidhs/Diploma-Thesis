@@ -1,10 +1,14 @@
 import socket
+import logging
+
 from OpenSSL import SSL
 from Crypto.PublicKey import RSA
 from Crypto.Cipher import PKCS1_OAEP
-from Crypto.Random import get_random_bytes
 
 from encryption import constants
+
+# Configure logging
+logging.basicConfig(filename='.\\logs\\ssl_connection.log', level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
 # Create a socket
 # socket.AF_INET: This specifies the address family to be used for the socket. In this case, it's AF_INET, which stands for IPv4. This means the socket will be used for Internet Protocol version 4 (IPv4) communication.
@@ -24,45 +28,39 @@ ssl_socket.set_tlsext_host_name(b'localhost') # server's hostname
 
 try:
   ssl_socket.do_handshake()
-  print("Handshake was successful!")
+  logging.info("Handshake was successful!")
   
   # Receive the server's public key
   server_public_key = ssl_socket.recv(4096)
-  print(server_public_key)
   
   # Import the server's public key for encryption
   server_key = RSA.import_key(server_public_key)
   
-  print(server_key)
-  
-  master_key = get_random_bytes(32)  # 256 bits
-  iv = get_random_bytes(12)  # 96 bits
+  # Convert integers to bytes
+  # bit.length() -> calculates the number of bits required to represent 
+  # rounds up the number of bits to the nearest byte. 
+  # ensures that enough bytes will be allocated to represent the integer.
+  master_key_bytes = constants.master_key.to_bytes((constants.master_key.bit_length() + 7) // 8, byteorder='big')
+  iv_bytes = constants.init_value.to_bytes((constants.init_value.bit_length() + 7) // 8, byteorder='big')
   
   # Encrypt the master key and IV with the server's public key
   cipher = PKCS1_OAEP.new(server_key)
-  encrypted_master_key = cipher.encrypt(master_key)
-  encrypted_iv = cipher.encrypt(iv)
+  encrypted_master_key = cipher.encrypt(master_key_bytes)
+  encrypted_iv = cipher.encrypt(iv_bytes)
   
   # Send the encrypted master key and IV to the server
-  # Break the encrypted data into chunks and send them
-  chunk_size = 256
-
-  for i in range(0, len(encrypted_master_key), chunk_size):
-      print('sending data...')
-      ssl_socket.send(encrypted_master_key[i:i+chunk_size])
-
-  for i in range(0, len(encrypted_iv), chunk_size):
-      print('sending data...')
-      ssl_socket.send(encrypted_iv[i:i+chunk_size])
-
+  ssl_socket.send(encrypted_master_key)
+  ssl_socket.send(encrypted_iv)
   
+  logging.info("Master Key and IV were successfully sent.")
+ 
 except SSL.Error as e:
-  print(f"TLS handshake error: {e}")
+  logging.error(f"TLS handshake error: {e}")
 except Exception as e:
-    print(f"An error occurred: {e}")
+  logging.error(f"An error occurred: {e}")
   
 # Close the SSL connection and the client socket
-ssl_socket.shutdown()
-ssl_socket.close()
-client_socket.close()
+# ssl_socket.shutdown()
+# ssl_socket.close()
+# client_socket.close()
 

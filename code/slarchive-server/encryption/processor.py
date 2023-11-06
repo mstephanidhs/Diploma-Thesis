@@ -11,10 +11,9 @@ class TraceProcessor:
     self.master_key = master_key
     self.init_value = init_value
     self.delimiter = b'\x00\xFF\x00\xFF\x00'
-    # dtype mappings
-    self.data_type_to_dtype = {
+    self.type_to_dtype = {
       "data": np.int32,
-      "time": np.float64
+      "time": np.float64, 
     }
     
   def convert_trace_to_json(self, trace):
@@ -45,8 +44,8 @@ class TraceProcessor:
         # Then, encodes the JSON string into bytes
         return json.dumps(serializable_stats, indent=2).encode()
       
-  def encrypt_trace(self, trace_data, trace_stats, trace_times):
-    trace_combined = trace_stats + self.delimiter + trace_data + self.delimiter + trace_times
+  def encrypt_trace(self, trace_data, trace_stats):
+    trace_combined = trace_stats + self.delimiter + trace_data
     
     # Create an instance of AES_GCM with the master_key
     my_gcm = AES_GCM(self.master_key)
@@ -77,12 +76,12 @@ class TraceProcessor:
   def split_trace(self, combined_data):
     parts = combined_data.split(self.delimiter)
     
-    if len(parts) == 3:
-      trace_stats, trace_data, trace_times = parts
+    if len(parts) == 2:
+      trace_stats, trace_data = parts
     else:
       raise DecryptionError('Decryption failed. Invalid data format.')
     
-    return trace_stats, trace_data, trace_times
+    return trace_stats, trace_data
   
   def convert_json_to_stats(self, trace, stats_json_bytes):
     # deserialize the JSON string into a dictionary

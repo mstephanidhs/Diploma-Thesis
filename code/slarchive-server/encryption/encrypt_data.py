@@ -24,10 +24,9 @@ processor = TraceProcessor(constants.master_key, constants.init_value)
 # Convert the data to binary format
 trace_data = trace.data.tobytes()
 trace_json = processor.convert_trace_to_json(trace)
-trace_times = trace.times().tobytes()
 
 # Encrypt data
-encrypted_trace = processor.encrypt_trace(trace_data, trace_json, trace_times)
+encrypted_trace = processor.encrypt_trace(trace_data, trace_json)
 
 # Write the encrypted data
 with open(target_file, 'wb') as file:
