@@ -1,2 +1,90 @@
 2023-11-06 23:43:31,032 - INFO - Accepted connection from ('127.0.0.1', 53746)
 2023-11-06 23:43:31,032 - INFO - Handshake was successful!
+2023-11-07 22:46:11,302 - INFO - Accepted connection from ('127.0.0.1', 54180)
+2023-11-07 22:46:11,313 - INFO - Handshake was successful!
+2023-11-07 22:46:11,556 - INFO - Received successfully the Master Key and IV.
+2023-11-07 22:46:11,661 - ERROR - TLS handshake error: 
+2023-11-07 22:46:12,533 - INFO - Accepted connection from ('127.0.0.1', 54188)
+2023-11-07 22:46:12,533 - INFO - Handshake was successful!
+2023-11-07 22:46:12,618 - INFO - Received successfully the Master Key and IV.
+2023-11-07 22:46:12,829 - ERROR - TLS handshake error: 
+2023-11-07 22:48:06,736 - INFO - Accepted connection from ('127.0.0.1', 54292)
+2023-11-07 22:48:06,736 - INFO - Handshake was successful!
+2023-11-07 22:48:06,833 - INFO - Received successfully the Master Key and IV.
+2023-11-07 22:48:07,081 - ERROR - TLS handshake error: 
+2023-11-07 22:48:07,993 - INFO - Accepted connection from ('127.0.0.1', 54304)
+2023-11-07 22:48:08,002 - INFO - Handshake was successful!
+2023-11-07 22:48:08,083 - INFO - Received successfully the Master Key and IV.
+2023-11-07 22:48:08,281 - ERROR - TLS handshake error: 
+2023-11-07 22:51:23,975 - INFO - Accepted connection from ('127.0.0.1', 54524)
+2023-11-07 22:51:23,982 - INFO - Handshake was successful!
+2023-11-07 22:51:24,067 - INFO - Received successfully the Master Key and IV.
+2023-11-07 22:51:24,716 - ERROR - TLS handshake error: 
+2023-11-07 22:51:25,461 - INFO - Accepted connection from ('127.0.0.1', 54532)
+2023-11-07 22:51:25,472 - INFO - Handshake was successful!
+2023-11-07 22:51:25,553 - INFO - Received successfully the Master Key and IV.
+2023-11-07 22:51:26,165 - ERROR - TLS handshake error: 
+2023-11-07 22:55:39,463 - INFO - Accepted connection from ('127.0.0.1', 54807)
+2023-11-07 22:55:39,473 - INFO - Handshake was successful!
+2023-11-07 22:55:39,541 - INFO - Received successfully the Master Key and IV.
+2023-11-07 22:55:39,541 - ERROR - TLS handshake error: 
+2023-11-07 22:56:36,493 - INFO - Accepted connection from ('127.0.0.1', 54853)
+2023-11-07 22:56:36,493 - INFO - Handshake was successful!
+2023-11-07 22:56:36,586 - INFO - Received successfully the Master Key and IV.
+2023-11-07 22:56:36,783 - ERROR - TLS handshake error: 
+2023-11-07 22:57:13,172 - INFO - Accepted connection from ('127.0.0.1', 54916)
+2023-11-07 22:57:13,172 - INFO - Handshake was successful!
+2023-11-07 22:57:13,256 - INFO - Received successfully the Master Key and IV.
+2023-11-07 22:57:13,442 - ERROR - TLS handshake error: 
+2023-11-07 22:59:49,652 - INFO - Accepted connection from ('127.0.0.1', 55016)
+2023-11-07 22:59:49,653 - INFO - Handshake was successful!
+2023-11-07 22:59:49,731 - INFO - Received successfully the Master Key and IV.
+2023-11-07 22:59:49,913 - ERROR - TLS handshake error: 
+2023-11-07 23:00:37,092 - INFO - Accepted connection from ('127.0.0.1', 55100)
+2023-11-07 23:00:37,101 - INFO - Handshake was successful!
+2023-11-07 23:00:37,176 - INFO - Received successfully the Master Key and IV.
+2023-11-07 23:00:37,361 - ERROR - TLS handshake error: 
+2023-11-07 23:01:13,791 - INFO - Accepted connection from ('127.0.0.1', 55186)
+2023-11-07 23:01:13,794 - INFO - Handshake was successful!
+2023-11-07 23:01:13,872 - INFO - Received successfully the Master Key and IV.
+2023-11-07 23:01:14,062 - ERROR - TLS handshake error: 
+2023-11-07 23:01:54,725 - INFO - Accepted connection from ('127.0.0.1', 55275)
+2023-11-07 23:01:54,730 - INFO - Handshake was successful!
+2023-11-07 23:01:54,853 - INFO - Received successfully the Master Key and IV.
+2023-11-07 23:01:55,007 - ERROR - TLS handshake error: 
+2023-11-07 23:03:15,149 - INFO - Accepted connection from ('127.0.0.1', 55409)
+2023-11-07 23:03:15,157 - INFO - Handshake was successful!
+2023-11-07 23:03:15,276 - INFO - Received successfully the Master Key and IV.
+2023-11-07 23:03:15,433 - ERROR - TLS handshake error: 
+2023-11-07 23:09:58,262 - INFO - Accepted connection from ('127.0.0.1', 55729)
+2023-11-07 23:09:58,267 - INFO - Handshake was successful!
+2023-11-07 23:09:58,359 - INFO - Received successfully the Master Key and IV.
+2023-11-07 23:09:58,495 - ERROR - TLS handshake error: 
+2023-11-07 23:10:20,022 - INFO - Accepted connection from ('127.0.0.1', 55786)
+2023-11-07 23:10:20,027 - INFO - Handshake was successful!
+2023-11-07 23:10:20,144 - INFO - Received successfully the Master Key and IV.
+2023-11-07 23:10:20,363 - ERROR - TLS handshake error: 
+2023-11-07 23:11:20,021 - INFO - Accepted connection from ('127.0.0.1', 55876)
+2023-11-07 23:11:20,036 - INFO - Handshake was successful!
+2023-11-07 23:11:20,130 - INFO - Received successfully the Master Key and IV.
+2023-11-07 23:11:20,540 - ERROR - TLS handshake error: 
+2023-11-07 23:12:12,385 - INFO - Accepted connection from ('127.0.0.1', 55962)
+2023-11-07 23:12:12,391 - INFO - Handshake was successful!
+2023-11-07 23:12:12,483 - INFO - Received successfully the Master Key and IV.
+2023-11-07 23:12:12,617 - ERROR - TLS handshake error: 
+2023-11-07 23:12:54,873 - INFO - Accepted connection from ('127.0.0.1', 56044)
+2023-11-07 23:12:54,879 - INFO - Handshake was successful!
+2023-11-07 23:12:54,969 - INFO - Received successfully the Master Key and IV.
+2023-11-07 23:12:55,395 - ERROR - TLS handshake error: 
+2023-11-07 23:13:59,867 - INFO - Accepted connection from ('127.0.0.1', 56129)
+2023-11-07 23:13:59,873 - INFO - Handshake was successful!
+2023-11-07 23:13:59,960 - INFO - Received successfully the Master Key and IV.
+2023-11-07 23:14:24,036 - INFO - Accepted connection from ('127.0.0.1', 56186)
+2023-11-07 23:14:24,036 - INFO - Handshake was successful!
+2023-11-07 23:14:24,132 - INFO - Received successfully the Master Key and IV.
+2023-11-07 23:27:00,963 - INFO - Accepted connection from ('127.0.0.1', 56493)
+2023-11-07 23:27:00,963 - INFO - Handshake was successful!
+2023-11-07 23:27:01,045 - INFO - Received successfully the Master Key and IV.
+2023-11-07 23:28:26,929 - INFO - Accepted connection from ('127.0.0.1', 56750)
+2023-11-07 23:28:26,929 - INFO - Handshake was successful!
+2023-11-07 23:28:27,027 - INFO - Received successfully the Master Key and IV.

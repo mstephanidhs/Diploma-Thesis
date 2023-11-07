@@ -62,12 +62,32 @@ while True:
     master_key_hex = binascii.hexlify(master_key).decode('utf-8')
     iv_hex = binascii.hexlify(iv).decode('utf-8')
     
+    # Receive the total data size as a 4-byte integer
+    total_size_bytes = ssl_socket.recv(4)
+    total_data_size = int.from_bytes(total_size_bytes, byteorder='big')
+    
+    # Receive the chunk size from the client
+    chunk_size_bytes = ssl_socket.recv(4)  # Assuming a 4-byte chunk size
+    chunk_size = int.from_bytes(chunk_size_bytes, byteorder='big')
+
+    # Create a variable to store the received data
+    received_data = b""
+
+    while len(received_data) < total_data_size:
+        # Receive a chunk of data based on the received 'chunk_size'
+        chunk = ssl_socket.recv(chunk_size)
+
+        # Append the received chunk to the existing data
+        received_data += chunk
+        
+    print(received_data)
+    
   except SSL.Error as e:
     logging.error(f"TLS handshake error: {e}")
   except Exception as e:
     logging.error(f"An error occurred: {e}")
     
   # Close the SSL connection and the client socket
-  # ssl_socket.shutdown()
-  # ssl_socket.close()
-  # client_socket.close()
+  ssl_socket.shutdown()
+  ssl_socket.close()
+  client_socket.close()

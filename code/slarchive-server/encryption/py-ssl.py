@@ -1,14 +1,33 @@
 import socket
 import logging
+import sys
 
 from OpenSSL import SSL
 from Crypto.PublicKey import RSA
 from Crypto.Cipher import PKCS1_OAEP
 
-from encryption import constants
+import constants
+from encrypt_data import DataEncryption
+
+def calculate_chunk_size(total_size, max_chunk_size):
+    # Determine the number of chunks based on the total size and a maximum chunk size
+    num_chunks = (total_size + max_chunk_size - 1) // max_chunk_size
+
+    # Calculate the chunk size to evenly divide the data
+    chunk_size = total_size // num_chunks
+
+    return chunk_size
 
 # Configure logging
 logging.basicConfig(filename='.\\logs\\ssl_connection.log', level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
+
+# if len(sys.argv) != 2:
+#   logging.warning('Usage: python encryption_script.py source_file')
+#   sys.exit(1)
+  
+# source_file = sys.argv[1]
+source_file = '.\\..\\archive\\2023\\ZW\\ITSC\\EHE.D\\ZW.ITSC.00.EHE.D.2023.295'
+
 
 # Create a socket
 # socket.AF_INET: This specifies the address family to be used for the socket. In this case, it's AF_INET, which stands for IPv4. This means the socket will be used for Internet Protocol version 4 (IPv4) communication.
@@ -53,6 +72,41 @@ try:
   ssl_socket.send(encrypted_iv)
   
   logging.info("Master Key and IV were successfully sent.")
+  
+########## CHANGES ########## 
+  
+  script = DataEncryption(source_file)
+  script.configure_logging()
+  encrypted_data = script.run()
+  
+  total_data_size = len(encrypted_data)  # Replace with the actual data size
+  
+  # Send the total data size as a 4-byte integer
+  total_size_bytes = total_data_size.to_bytes(4, byteorder='big')
+  ssl_socket.send(total_size_bytes)
+  
+  max_chunk_size = 8192  # Set your desired maximum chunk size
+  # Calculate the chunk size
+  chunk_size = calculate_chunk_size(total_data_size, max_chunk_size)
+  # Send the chunk size to the server
+  chunk_size_bytes = chunk_size.to_bytes(4, byteorder='big')  # Assuming a 4-byte chunk size
+  ssl_socket.send(chunk_size_bytes)
+  
+  # Initialize an index for tracking progress
+  index = 0
+
+  while index < total_data_size:
+      # Extract a chunk of data
+      chunk = encrypted_data[index:index + chunk_size]
+
+      # Send the chunk
+      ssl_socket.send(chunk)
+
+      # Update the index to move to the next chunk
+      index += len(chunk)
+
+  # Once all chunks are sent, you can signal the end of data transmission if needed
+  ssl_socket.send(b"x00")  # Send an empty byte to signal the end
  
 except SSL.Error as e:
   logging.error(f"TLS handshake error: {e}")
@@ -60,7 +114,7 @@ except Exception as e:
   logging.error(f"An error occurred: {e}")
   
 # Close the SSL connection and the client socket
-# ssl_socket.shutdown()
-# ssl_socket.close()
-# client_socket.close()
+ssl_socket.shutdown()
+ssl_socket.close()
+client_socket.close()
 
