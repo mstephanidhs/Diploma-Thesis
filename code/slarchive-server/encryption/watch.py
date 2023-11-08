@@ -34,7 +34,7 @@ class Handler(FileSystemEventHandler):
   def on_modified(event):
     
     # Location of the script to be executed
-    encryptionScript = ".\\py-ssl.py"
+    encryptionScript = ".\\ssl_con.py"
     
     if not event.is_directory:
       

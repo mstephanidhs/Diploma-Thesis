@@ -88,3 +88,89 @@
 2023-11-07 23:28:26,929 - INFO - Accepted connection from ('127.0.0.1', 56750)
 2023-11-07 23:28:26,929 - INFO - Handshake was successful!
 2023-11-07 23:28:27,027 - INFO - Received successfully the Master Key and IV.
+2023-11-08 19:20:14,174 - INFO - Accepted connection from ('127.0.0.1', 54616)
+2023-11-08 19:20:14,190 - INFO - Handshake was successful!
+2023-11-08 19:20:14,294 - INFO - Received successfully the Master Key and IV.
+2023-11-08 19:20:14,428 - ERROR - An error occurred: '>=' not supported between instances of 'bytes' and 'int'
+2023-11-08 19:22:25,568 - INFO - Accepted connection from ('127.0.0.1', 54715)
+2023-11-08 19:22:25,583 - INFO - Handshake was successful!
+2023-11-08 19:22:25,670 - INFO - Received successfully the Master Key and IV.
+2023-11-08 19:22:25,807 - ERROR - An error occurred: '>=' not supported between instances of 'bytes' and 'int'
+2023-11-08 19:23:57,797 - INFO - Accepted connection from ('127.0.0.1', 54768)
+2023-11-08 19:23:57,813 - INFO - Handshake was successful!
+2023-11-08 19:23:57,895 - INFO - Received successfully the Master Key and IV.
+2023-11-08 19:23:58,036 - ERROR - An error occurred: '>=' not supported between instances of 'bytes' and 'int'
+2023-11-08 19:24:35,284 - INFO - Accepted connection from ('127.0.0.1', 54801)
+2023-11-08 19:24:35,284 - INFO - Handshake was successful!
+2023-11-08 19:24:35,378 - INFO - Received successfully the Master Key and IV.
+2023-11-08 19:24:35,517 - ERROR - An error occurred: '>=' not supported between instances of 'bytes' and 'int'
+2023-11-08 19:26:26,390 - INFO - Accepted connection from ('127.0.0.1', 54881)
+2023-11-08 19:26:26,390 - INFO - Handshake was successful!
+2023-11-08 19:26:26,491 - INFO - Received successfully the Master Key and IV.
+2023-11-08 19:26:26,622 - ERROR - An error occurred: '>=' not supported between instances of 'bytes' and 'int'
+2023-11-08 19:27:56,550 - INFO - Accepted connection from ('127.0.0.1', 55153)
+2023-11-08 19:27:56,566 - INFO - Handshake was successful!
+2023-11-08 19:27:56,667 - INFO - Received successfully the Master Key and IV.
+2023-11-08 19:27:56,805 - ERROR - An error occurred: '>=' not supported between instances of 'bytes' and 'int'
+2023-11-08 19:28:55,697 - INFO - Accepted connection from ('127.0.0.1', 55223)
+2023-11-08 19:28:55,713 - INFO - Handshake was successful!
+2023-11-08 19:28:55,802 - INFO - Received successfully the Master Key and IV.
+2023-11-08 19:28:55,940 - ERROR - An error occurred: '>=' not supported between instances of 'bytes' and 'int'
+2023-11-08 19:30:09,133 - INFO - Accepted connection from ('127.0.0.1', 55298)
+2023-11-08 19:30:09,133 - INFO - Handshake was successful!
+2023-11-08 19:30:09,217 - INFO - Received successfully the Master Key and IV.
+2023-11-08 19:30:09,364 - ERROR - An error occurred: '>=' not supported between instances of 'bytes' and 'int'
+2023-11-08 19:30:48,836 - INFO - Accepted connection from ('127.0.0.1', 55342)
+2023-11-08 19:30:48,844 - INFO - Handshake was successful!
+2023-11-08 19:30:48,945 - INFO - Received successfully the Master Key and IV.
+2023-11-08 19:30:49,067 - ERROR - An error occurred: '>=' not supported between instances of 'bytes' and 'int'
+2023-11-08 22:58:50,550 - INFO - Accepted connection from ('127.0.0.1', 54536)
+2023-11-08 22:58:50,550 - INFO - Handshake was successful!
+2023-11-08 22:58:50,655 - INFO - Received successfully the Master Key and IV.
+2023-11-08 22:58:50,813 - ERROR - TLS handshake error: 
+2023-11-08 22:58:51,535 - INFO - Accepted connection from ('127.0.0.1', 54551)
+2023-11-08 22:58:51,535 - INFO - Handshake was successful!
+2023-11-08 22:58:51,592 - INFO - Received successfully the Master Key and IV.
+2023-11-08 22:58:51,747 - ERROR - TLS handshake error: 
+2023-11-08 23:02:19,383 - INFO - Accepted connection from ('127.0.0.1', 54943)
+2023-11-08 23:02:19,400 - INFO - Handshake was successful!
+2023-11-08 23:02:19,466 - INFO - Received successfully the Master Key and IV.
+2023-11-08 23:02:19,616 - ERROR - TLS handshake error: 
+2023-11-08 23:02:20,219 - INFO - Accepted connection from ('127.0.0.1', 54952)
+2023-11-08 23:02:20,222 - INFO - Handshake was successful!
+2023-11-08 23:02:20,263 - INFO - Received successfully the Master Key and IV.
+2023-11-08 23:02:20,425 - ERROR - TLS handshake error: 
+2023-11-08 23:05:49,925 - INFO - Accepted connection from ('127.0.0.1', 55132)
+2023-11-08 23:05:49,925 - INFO - Handshake was successful!
+2023-11-08 23:05:50,008 - INFO - Received successfully the Master Key and IV.
+2023-11-08 23:05:50,141 - ERROR - TLS handshake error: 
+2023-11-08 23:05:50,804 - INFO - Accepted connection from ('127.0.0.1', 55140)
+2023-11-08 23:05:50,804 - INFO - Handshake was successful!
+2023-11-08 23:05:50,867 - INFO - Received successfully the Master Key and IV.
+2023-11-08 23:05:51,021 - ERROR - TLS handshake error: 
+2023-11-08 23:06:57,126 - INFO - Accepted connection from ('127.0.0.1', 55246)
+2023-11-08 23:06:57,126 - INFO - Handshake was successful!
+2023-11-08 23:06:57,226 - INFO - Received successfully the Master Key and IV.
+2023-11-08 23:06:57,458 - ERROR - TLS handshake error: 
+2023-11-08 23:06:58,057 - INFO - Accepted connection from ('127.0.0.1', 55253)
+2023-11-08 23:06:58,072 - INFO - Handshake was successful!
+2023-11-08 23:06:58,128 - INFO - Received successfully the Master Key and IV.
+2023-11-08 23:06:58,286 - ERROR - TLS handshake error: 
+2023-11-08 23:08:07,949 - INFO - Accepted connection from ('127.0.0.1', 55325)
+2023-11-08 23:08:07,949 - INFO - Handshake was successful!
+2023-11-08 23:08:08,015 - INFO - Received successfully the Master Key and IV.
+2023-11-08 23:08:08,165 - ERROR - TLS handshake error: 
+2023-11-08 23:08:08,778 - INFO - Accepted connection from ('127.0.0.1', 55334)
+2023-11-08 23:08:08,778 - INFO - Handshake was successful!
+2023-11-08 23:08:08,833 - INFO - Received successfully the Master Key and IV.
+2023-11-08 23:08:08,996 - ERROR - TLS handshake error: 
+2023-11-08 23:08:41,774 - INFO - Accepted connection from ('127.0.0.1', 55399)
+2023-11-08 23:08:41,774 - INFO - Handshake was successful!
+2023-11-08 23:08:41,840 - INFO - Received successfully the Master Key and IV.
+2023-11-08 23:08:42,023 - ERROR - TLS handshake error: 
+2023-11-08 23:13:01,799 - INFO - Accepted connection from ('127.0.0.1', 55669)
+2023-11-08 23:13:01,799 - INFO - Handshake was successful!
+2023-11-08 23:13:01,864 - INFO - Received successfully the Master Key and IV.
+2023-11-08 23:13:02,669 - INFO - Accepted connection from ('127.0.0.1', 55676)
+2023-11-08 23:13:02,674 - INFO - Handshake was successful!
+2023-11-08 23:13:02,735 - INFO - Received successfully the Master Key and IV.

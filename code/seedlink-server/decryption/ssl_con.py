@@ -6,8 +6,12 @@ from Crypto.PublicKey import RSA
 from Crypto.Cipher import PKCS1_OAEP
 import binascii
 
+import obspy
+
+from processor import TraceProcessor
+
 # Configure logging
-logging.basicConfig(filename='.\\logs\\ssl_connection.log', level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
+logging.basicConfig(filename='.\\..\\logs\\ssl_connection.log', level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
 # Create a socket
 # socket.AF_INET: This specifies the address family to be used for the socket. In this case, it's AF_INET, which stands for IPv4. This means the socket will be used for Internet Protocol version 4 (IPv4) communication.
@@ -24,8 +28,8 @@ context = SSL.Context(SSL.SSLv23_METHOD)
 
 # Execute the below command in order to produce the server-certs needed
 # openssl req -x509 -nodes -newkey rsa:2048 -keyout server-key.pem -out server-cert.pem -days 365
-context.use_privatekey_file('.\\server_cred\\server-key.pem')
-context.use_certificate_file('.\\server_cred\\server-cert.pem')
+context.use_privatekey_file('.\\..\\server_cred\\server-key.pem')
+context.use_certificate_file('.\\..\\server_cred\\server-cert.pem')
 
 print("Server is listening on port 8443...")
 
@@ -42,33 +46,38 @@ while True:
     logging.info("Handshake was successful!")
     
     # Send the server's public key to the client after the handshake
-    server_public_key = open('.\\server_cred\\server-cert.pem', 'rb').read()
+    server_public_key = open('.\\..\\server_cred\\server-cert.pem', 'rb').read()
     ssl_socket.send(server_public_key)
 
-    
     # Securely receive the client's encrypted master key and IV
     encrypted_master_key = ssl_socket.recv(256)
     encrypted_iv = ssl_socket.recv(256)
 
     # Decrypt the master key and IV using the server's private key
-    server_private_key = RSA.importKey(open('.\\server_cred\\server-key.pem').read())
+    server_private_key = RSA.importKey(open('.\\..\\server_cred\\server-key.pem').read())
     cipher = PKCS1_OAEP.new(server_private_key)
     master_key = cipher.decrypt(encrypted_master_key)
     iv = cipher.decrypt(encrypted_iv)
     
-    logging.info("Received successfully the Master Key and IV.")
+    logging.info("Received successfully Master Key and IV.")
+    print("Received successfully the Master Key and IV.")
     
     # Convert the decrypted values to hexadecimal strings
     master_key_hex = binascii.hexlify(master_key).decode('utf-8')
     iv_hex = binascii.hexlify(iv).decode('utf-8')
     
+    print("Master Key", master_key_hex)
+    print('IV: ', iv_hex)
+    
     # Receive the total data size as a 4-byte integer
     total_size_bytes = ssl_socket.recv(4)
     total_data_size = int.from_bytes(total_size_bytes, byteorder='big')
+    print(total_data_size)
     
     # Receive the chunk size from the client
     chunk_size_bytes = ssl_socket.recv(4)  # Assuming a 4-byte chunk size
     chunk_size = int.from_bytes(chunk_size_bytes, byteorder='big')
+    print("Received chunk size")
 
     # Create a variable to store the received data
     received_data = b""
@@ -79,8 +88,28 @@ while True:
 
         # Append the received chunk to the existing data
         received_data += chunk
+      
+    print("Received encrypted data")
         
-    print(received_data)
+    # processor = TraceProcessor(master_key, iv)
+    
+    # decrypted_data = processor.decrypt_trace(received_data)
+    
+    # print('Decrypted data')
+    
+    # restored_trace_json_bytes, trace_data_binary = processor.split_trace(decrypted_data)
+    
+    # print('Data splitted')
+    
+    # restored_trace = obspy.Trace()
+    
+    # processor.convert_json_to_stats(restored_trace, restored_trace_json_bytes)
+    # processor.convert_binary_to_data(restored_trace, trace_data_binary, 'data')
+    
+    # print("Data ready")
+    
+    # print(restored_trace.stats)
+    # print(restored_trace.data)
     
   except SSL.Error as e:
     logging.error(f"TLS handshake error: {e}")

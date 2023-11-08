@@ -81,3 +81,83 @@
 2023-11-07 23:28:26,929 - INFO - Handshake was successful!
 2023-11-07 23:28:26,945 - INFO - Master Key and IV were successfully sent.
 2023-11-07 23:28:27,127 - INFO - Encryption process completed for source file: .\..\archive\2023\ZW\ITSC\EHE.D\ZW.ITSC.00.EHE.D.2023.295
+2023-11-08 19:19:09,621 - INFO - Handshake was successful!
+2023-11-08 19:19:09,683 - INFO - Master Key and IV were successfully sent.
+2023-11-08 19:19:10,124 - INFO - Encryption process completed for source file: .\..\archive\2023\ZW\ITSC\EHE.D\ZW.ITSC.00.EHE.D.2023.295
+2023-11-08 19:20:14,190 - INFO - Handshake was successful!
+2023-11-08 19:20:14,190 - INFO - Master Key and IV were successfully sent.
+2023-11-08 19:20:14,428 - INFO - Encryption process completed for source file: .\..\archive\2023\ZW\ITSC\EHE.D\ZW.ITSC.00.EHE.D.2023.295
+2023-11-08 19:22:25,583 - INFO - Handshake was successful!
+2023-11-08 19:22:25,599 - INFO - Master Key and IV were successfully sent.
+2023-11-08 19:22:25,807 - INFO - Encryption process completed for source file: .\..\archive\2023\ZW\ITSC\EHE.D\ZW.ITSC.00.EHE.D.2023.295
+2023-11-08 19:23:57,813 - INFO - Handshake was successful!
+2023-11-08 19:23:57,813 - INFO - Master Key and IV were successfully sent.
+2023-11-08 19:23:58,028 - INFO - Encryption process completed for source file: .\..\archive\2023\ZW\ITSC\EHE.D\ZW.ITSC.00.EHE.D.2023.295
+2023-11-08 19:24:35,284 - INFO - Handshake was successful!
+2023-11-08 19:24:35,299 - INFO - Master Key and IV were successfully sent.
+2023-11-08 19:24:35,501 - INFO - Encryption process completed for source file: .\..\archive\2023\ZW\ITSC\EHE.D\ZW.ITSC.00.EHE.D.2023.295
+2023-11-08 19:26:26,390 - INFO - Handshake was successful!
+2023-11-08 19:26:26,406 - INFO - Master Key and IV were successfully sent.
+2023-11-08 19:26:26,622 - INFO - Encryption process completed for source file: .\..\archive\2023\ZW\ITSC\EHE.D\ZW.ITSC.00.EHE.D.2023.295
+2023-11-08 19:27:56,566 - INFO - Handshake was successful!
+2023-11-08 19:27:56,566 - INFO - Master Key and IV were successfully sent.
+2023-11-08 19:27:56,797 - INFO - Encryption process completed for source file: .\..\archive\2023\ZW\ITSC\EHE.D\ZW.ITSC.00.EHE.D.2023.295
+2023-11-08 19:28:55,713 - INFO - Handshake was successful!
+2023-11-08 19:28:55,728 - INFO - Master Key and IV were successfully sent.
+2023-11-08 19:28:55,924 - INFO - Encryption process completed for source file: .\..\archive\2023\ZW\ITSC\EHE.D\ZW.ITSC.00.EHE.D.2023.295
+2023-11-08 19:30:09,133 - INFO - Handshake was successful!
+2023-11-08 19:30:09,149 - INFO - Master Key and IV were successfully sent.
+2023-11-08 19:30:09,356 - INFO - Encryption process completed for source file: .\..\archive\2023\ZW\ITSC\EHE.D\ZW.ITSC.00.EHE.D.2023.295
+2023-11-08 19:30:48,844 - INFO - Handshake was successful!
+2023-11-08 19:30:48,861 - INFO - Master Key and IV were successfully sent.
+2023-11-08 19:30:49,067 - INFO - Encryption process completed for source file: .\..\archive\2023\ZW\ITSC\EHE.D\ZW.ITSC.00.EHE.D.2023.295
+2023-11-08 22:58:50,550 - INFO - Handshake was successful!
+2023-11-08 22:58:50,566 - INFO - Master Key and IV were successfully sent.
+2023-11-08 22:58:50,812 - INFO - Encryption process completed for source file: .\..\archive\2023\ZW\ITSC\EHE.D\ZW.ITSC.00.EHN.D.2023.295
+2023-11-08 22:58:50,812 - ERROR - An error occurred: 'Connection' object is not callable
+2023-11-08 22:58:51,535 - INFO - Handshake was successful!
+2023-11-08 22:58:51,550 - INFO - Master Key and IV were successfully sent.
+2023-11-08 22:58:51,747 - INFO - Encryption process completed for source file: .\..\archive\2023\ZW\ITSC\EHE.D\ZW.ITSC.00.EHN.D.2023.295
+2023-11-08 22:58:51,747 - ERROR - An error occurred: 'Connection' object is not callable
+2023-11-08 23:02:19,400 - INFO - Handshake was successful!
+2023-11-08 23:02:19,407 - INFO - Master Key and IV were successfully sent.
+2023-11-08 23:02:19,616 - INFO - Encryption process completed for source file: .\..\archive\2023\ZW\ITSC\EHE.D\ZW.ITSC.00.EHN.D.2023.295
+2023-11-08 23:02:19,616 - ERROR - An error occurred: SSLEncryptionClient.calculate_chunk_size() takes 2 positional arguments but 3 were given
+2023-11-08 23:02:20,222 - INFO - Handshake was successful!
+2023-11-08 23:02:20,232 - INFO - Master Key and IV were successfully sent.
+2023-11-08 23:02:20,409 - INFO - Encryption process completed for source file: .\..\archive\2023\ZW\ITSC\EHE.D\ZW.ITSC.00.EHN.D.2023.295
+2023-11-08 23:02:20,409 - ERROR - An error occurred: SSLEncryptionClient.calculate_chunk_size() takes 2 positional arguments but 3 were given
+2023-11-08 23:05:49,925 - INFO - Handshake was successful!
+2023-11-08 23:05:49,925 - INFO - Master Key and IV were successfully sent.
+2023-11-08 23:05:50,125 - INFO - Encryption process completed for source file: .\..\archive\2023\ZW\ITSC\EHE.D\ZW.ITSC.00.EHN.D.2023.295
+2023-11-08 23:05:50,141 - ERROR - An error occurred: SSLEncryptionClient.calculate_chunk_size() takes 2 positional arguments but 3 were given
+2023-11-08 23:05:50,804 - INFO - Handshake was successful!
+2023-11-08 23:05:50,820 - INFO - Master Key and IV were successfully sent.
+2023-11-08 23:05:51,005 - INFO - Encryption process completed for source file: .\..\archive\2023\ZW\ITSC\EHE.D\ZW.ITSC.00.EHN.D.2023.295
+2023-11-08 23:05:51,021 - ERROR - An error occurred: SSLEncryptionClient.calculate_chunk_size() takes 2 positional arguments but 3 were given
+2023-11-08 23:06:57,126 - INFO - Handshake was successful!
+2023-11-08 23:06:57,142 - INFO - Master Key and IV were successfully sent.
+2023-11-08 23:06:57,458 - INFO - Encryption process completed for source file: .\..\archive\2023\ZW\ITSC\EHE.D\ZW.ITSC.00.EHN.D.2023.295
+2023-11-08 23:06:57,458 - ERROR - An error occurred: SSLEncryptionClient.calculate_chunk_size() takes 2 positional arguments but 3 were given
+2023-11-08 23:06:58,072 - INFO - Handshake was successful!
+2023-11-08 23:06:58,081 - INFO - Master Key and IV were successfully sent.
+2023-11-08 23:06:58,285 - INFO - Encryption process completed for source file: .\..\archive\2023\ZW\ITSC\EHE.D\ZW.ITSC.00.EHN.D.2023.295
+2023-11-08 23:06:58,286 - ERROR - An error occurred: SSLEncryptionClient.calculate_chunk_size() takes 2 positional arguments but 3 were given
+2023-11-08 23:08:07,949 - INFO - Handshake was successful!
+2023-11-08 23:08:07,966 - INFO - Master Key and IV were successfully sent.
+2023-11-08 23:08:08,165 - INFO - Encryption process completed for source file: .\..\archive\2023\ZW\ITSC\EHE.D\ZW.ITSC.00.EHN.D.2023.295
+2023-11-08 23:08:08,165 - ERROR - An error occurred: SSLEncryptionClient.calculate_chunk_size() takes 2 positional arguments but 3 were given
+2023-11-08 23:08:08,778 - INFO - Handshake was successful!
+2023-11-08 23:08:08,794 - INFO - Master Key and IV were successfully sent.
+2023-11-08 23:08:08,996 - INFO - Encryption process completed for source file: .\..\archive\2023\ZW\ITSC\EHE.D\ZW.ITSC.00.EHN.D.2023.295
+2023-11-08 23:08:08,996 - ERROR - An error occurred: SSLEncryptionClient.calculate_chunk_size() takes 2 positional arguments but 3 were given
+2023-11-08 23:08:41,774 - INFO - Handshake was successful!
+2023-11-08 23:08:41,790 - INFO - Master Key and IV were successfully sent.
+2023-11-08 23:08:42,023 - INFO - Encryption process completed for source file: .\..\archive\2023\ZW\ITSC\EHE.D\ZW.ITSC.00.EHN.D.2023.295
+2023-11-08 23:08:42,023 - ERROR - An error occurred: SSLEncryptionClient.calculate_chunk_size() takes 2 positional arguments but 3 were given
+2023-11-08 23:13:01,799 - INFO - Handshake was successful!
+2023-11-08 23:13:01,814 - INFO - Master Key and IV were successfully sent.
+2023-11-08 23:13:02,014 - INFO - Encryption process completed for source file: .\..\archive\2023\ZW\ITSC\EHE.D\ZW.ITSC.00.EHN.D.2023.295
+2023-11-08 23:13:02,674 - INFO - Handshake was successful!
+2023-11-08 23:13:02,685 - INFO - Master Key and IV were successfully sent.
+2023-11-08 23:13:02,945 - INFO - Encryption process completed for source file: .\..\archive\2023\ZW\ITSC\EHE.D\ZW.ITSC.00.EHN.D.2023.295
