@@ -9,12 +9,15 @@ from Crypto.Cipher import PKCS1_OAEP
 
 from encrypt_data import DataEncryption
 
+import constants
+
 class SSLEncryptionClient:
   
-  def __init__(self, source_file):
+  def __init__(self, source_file, max_chunk_size = 8192):
     self.source_file = source_file
     self.client_socket = None
     self.ssl_socket = None
+    self.max_chunk_size = max_chunk_size
     
   def connect(self):
     # Create a socket
@@ -44,7 +47,41 @@ class SSLEncryptionClient:
     chunk_size = total_size // num_chunks
 
     return chunk_size
+  
+  def encrypt_data(self):
+    script = DataEncryption(self.source_file, constants.master_key, constants.init_value)
+    script.configure_logging()
+    encrypted_data = script.run()
     
+    return encrypted_data
+  
+  def calculate_total_data_size(self, encrypted_data):
+    total_data_size = len(encrypted_data)
+    # Send the total data size as a 4-byte integer
+    total_size_bytes = total_data_size.to_bytes(4, byteorder='big')
+    return total_size_bytes, total_data_size
+    
+  def calculate_chunk_size_bytes(self, total_data_size):
+    # Calculate the chunk size
+    chunk_size = self.calculate_chunk_size(total_data_size, self.max_chunk_size)
+    # In bytes
+    chunk_size_bytes = chunk_size.to_bytes(4, byteorder='big')
+    return chunk_size_bytes, chunk_size
+  
+  def send_chunk_encrypted_data(self, total_data_size, encrypted_data, chunk_size):
+    # Initialize an index for tracking progress
+    index = 0
+    
+    while index < total_data_size:
+      # Extract a chunk of data
+      chunk = encrypted_data[index:(index + chunk_size)]
+
+      # Send the chunk
+      self.ssl_socket.send(chunk) 
+      
+      # Update the index to the next chunk
+      index += len(chunk)
+      
   def send_encrypted_data(self):
     # Receive the server's public key
     server_public_key = self.ssl_socket.recv(4096)
@@ -72,38 +109,22 @@ class SSLEncryptionClient:
     
     logging.info("Master Key and IV were successfully sent.")
     
-    script = DataEncryption(self.source_file)
-    script.configure_logging()
-    encrypted_data = script.run()
+    encrypted_data = self.encrypt_data()
     
-    total_data_size = len(encrypted_data)
-    # Send the total data size as a 4-byte integer
-    total_size_bytes = total_data_size.to_bytes(4, byteorder='big')
-    self.ssl_socket.send(total_size_bytes)
+    # Send encrypted the data size
+    total_size_bytes, total_data_size = self.calculate_total_data_size(encrypted_data)
+    encrypted_total_size = cipher.encrypt(total_size_bytes)
+    self.ssl_socket.send(encrypted_total_size)
     
-    # the desired maximum chunk size
-    max_chunk_size = 8192
-    # Calculate the chunk size
-    chunk_size = self.calculate_chunk_size(total_data_size, max_chunk_size)
-    # Send the chunk size 
-    chunk_size_bytes = chunk_size.to_bytes(4, byteorder='big')
+    # Chunk Size
     # Assuming a 4-byte chunk size
-    self.ssl_socket.send(chunk_size_bytes)
+    chunk_size_bytes, chunk_size = self.calculate_chunk_size_bytes(total_data_size)
+    encrypted_chunk_size = cipher.encrypt(chunk_size_bytes)
+    self.ssl_socket.send(encrypted_chunk_size)
     
     logging.info("Total Size of Data and Chunk Size were successfully sent.")
     
-    # Initialize an index for tracking progress
-    index = 0
-    
-    while index < total_data_size:
-      # Extract a chunk of data
-      chunk = encrypted_data[index:index + chunk_size]
-      
-      # Send the chunk
-      self.ssl_socket.send(chunk)
-      
-      # Update the index to the next chunk
-      index += len(chunk)
+    self.send_chunk_encrypted_data(total_data_size, encrypted_data, chunk_size)
       
     logging.info("Encrypted data were sent successfully.")
       
@@ -128,6 +149,8 @@ class SSLEncryptionClient:
       self.ssl_socket.close()
     if self.client_socket:
       self.client_socket.close()
+      
+    logging.info("SLL Connection closed!")
       
 if __name__ == '__main__':
       

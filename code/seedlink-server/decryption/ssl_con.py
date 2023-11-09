@@ -6,12 +6,14 @@ from Crypto.PublicKey import RSA
 from Crypto.Cipher import PKCS1_OAEP
 import binascii
 
+import constants
+
 import obspy
 
 from processor import TraceProcessor
 
 # Configure logging
-logging.basicConfig(filename='.\\..\\logs\\ssl_connection.log', level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
+logging.basicConfig(filename='.\\logs\\ssl_connection.log', level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
 # Create a socket
 # socket.AF_INET: This specifies the address family to be used for the socket. In this case, it's AF_INET, which stands for IPv4. This means the socket will be used for Internet Protocol version 4 (IPv4) communication.
@@ -70,12 +72,15 @@ while True:
     print('IV: ', iv_hex)
     
     # Receive the total data size as a 4-byte integer
-    total_size_bytes = ssl_socket.recv(4)
+    encrypted_total_size = ssl_socket.recv(4096)
+    total_size_bytes = cipher.decrypt(encrypted_total_size)
+    print(total_size_bytes)
     total_data_size = int.from_bytes(total_size_bytes, byteorder='big')
     print(total_data_size)
     
     # Receive the chunk size from the client
-    chunk_size_bytes = ssl_socket.recv(4)  # Assuming a 4-byte chunk size
+    encrypted_chunk_size = ssl_socket.recv(4096)  # Assuming a 4-byte chunk size
+    chunk_size_bytes = cipher.decrypt(encrypted_chunk_size)
     chunk_size = int.from_bytes(chunk_size_bytes, byteorder='big')
     print("Received chunk size")
 
@@ -91,25 +96,25 @@ while True:
       
     print("Received encrypted data")
         
-    # processor = TraceProcessor(master_key, iv)
+    processor = TraceProcessor(constants.master_key, constants.init_value)
     
-    # decrypted_data = processor.decrypt_trace(received_data)
+    decrypted_data = processor.decrypt_trace(received_data)
     
-    # print('Decrypted data')
+    print('Decrypted data')
     
-    # restored_trace_json_bytes, trace_data_binary = processor.split_trace(decrypted_data)
+    restored_trace_json_bytes, trace_data_binary = processor.split_trace(decrypted_data)
     
-    # print('Data splitted')
+    print('Data splitted')
     
-    # restored_trace = obspy.Trace()
+    restored_trace = obspy.Trace()
     
-    # processor.convert_json_to_stats(restored_trace, restored_trace_json_bytes)
-    # processor.convert_binary_to_data(restored_trace, trace_data_binary, 'data')
+    processor.convert_json_to_stats(restored_trace, restored_trace_json_bytes)
+    processor.convert_binary_to_data(restored_trace, trace_data_binary, 'data')
     
-    # print("Data ready")
+    print("Data ready")
     
-    # print(restored_trace.stats)
-    # print(restored_trace.data)
+    print(restored_trace.stats)
+    print(restored_trace.data)
     
   except SSL.Error as e:
     logging.error(f"TLS handshake error: {e}")

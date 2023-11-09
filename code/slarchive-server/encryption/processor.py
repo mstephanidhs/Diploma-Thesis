@@ -11,7 +11,7 @@ class TraceProcessor:
     self.master_key = master_key
     self.init_value = init_value
     self.delimiter = b'\x00\xFF\x00\xFF\x00'
-    self.type_to_dtype = {
+    self.data_type_to_dtype = {
       "data": np.int32,
       "time": np.float64, 
     }
