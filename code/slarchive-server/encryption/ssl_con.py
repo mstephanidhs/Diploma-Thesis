@@ -1,6 +1,6 @@
 import socket
 import logging
-import secrets
+from secrets import token_bytes
 import sys
 
 from OpenSSL import SSL
@@ -8,8 +8,6 @@ from Crypto.PublicKey import RSA
 from Crypto.Cipher import PKCS1_OAEP
 
 from encrypt_data import DataEncryption
-
-import constants
 
 class SSLEncryptionClient:
   
@@ -48,8 +46,8 @@ class SSLEncryptionClient:
 
     return chunk_size
   
-  def encrypt_data(self):
-    script = DataEncryption(self.source_file, constants.master_key, constants.init_value)
+  def encrypt_data(self, master_key, init_value):
+    script = DataEncryption(self.source_file, master_key, init_value)
     script.configure_logging()
     encrypted_data = script.run()
     
@@ -82,6 +80,9 @@ class SSLEncryptionClient:
       # Update the index to the next chunk
       index += len(chunk)
       
+  def generate_random_key(self, size):
+    return int.from_bytes(token_bytes(size), byteorder='big')
+      
   def send_encrypted_data(self):
     # Receive the server's public key
     server_public_key = self.ssl_socket.recv(4096)
@@ -90,13 +91,13 @@ class SSLEncryptionClient:
     server_key = RSA.import_key(server_public_key)
     
     # Generate a random 128-bit (16-byte) master key
-    master_key = secrets.token_hex(16)
+    master_key = self.generate_random_key(16)
     # Generate a random 96-bit (12-byte) initialization vector (IV)
-    init_value = secrets.token_hex(12)
+    init_value = self.generate_random_key(12)
     
-    # Convert the generated values from hexadecimal strings to bytes
-    master_key_bytes = bytes.fromhex(master_key)
-    init_value_bytes = bytes.fromhex(init_value)
+    # Convert master_key and init_value to bytes
+    master_key_bytes = master_key.to_bytes(16, byteorder='big')
+    init_value_bytes = init_value.to_bytes(12, byteorder='big')
     
     # Encrypt the master key and IV with the server's public key
     cipher = PKCS1_OAEP.new(server_key)
@@ -109,7 +110,7 @@ class SSLEncryptionClient:
     
     logging.info("Master Key and IV were successfully sent.")
     
-    encrypted_data = self.encrypt_data()
+    encrypted_data = self.encrypt_data(master_key, init_value)
     
     # Send encrypted the data size
     total_size_bytes, total_data_size = self.calculate_total_data_size(encrypted_data)
@@ -136,9 +137,9 @@ class SSLEncryptionClient:
       self.send_encrypted_data()
       
     except SSL.Error as e:
-      logging.error(f"TLS handshake error: {e}")
+      logging.error(f"TLS handshake error: {e}", exc_info=True)
     except Exception as e:
-      logging.error(f"An error occurred: {e}")
+      logging.error(f"An error occurred: {e}", exc_info=True)
       
     finally:
       self.close()
@@ -158,6 +159,7 @@ if __name__ == '__main__':
     logging.warning('Usage: python ssl_con.py source_file')
     
   source_file = sys.argv[1]
+  # source_file = '.\\..\\archive\\2023\\ZW\\ITSC\\EHN.D\\ZW.ITSC.00.EHN.D.2023.295'
   
   logging.basicConfig(filename='.\\logs\\ssl_connection.log', level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
   

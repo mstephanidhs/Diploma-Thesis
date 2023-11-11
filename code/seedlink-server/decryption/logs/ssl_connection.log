@@ -1,88 +1,88 @@
-2023-11-09 21:57:25,771 - INFO - Accepted connection from ('127.0.0.1', 57442)
-2023-11-09 21:57:25,787 - INFO - Handshake was successful!
-2023-11-09 21:57:25,867 - INFO - Received successfully Master Key and IV.
-2023-11-09 21:57:26,205 - ERROR - An error occurred: 'TraceProcessor' object has no attribute 'data_type_to_dtype'
-2023-11-09 21:57:26,810 - INFO - Accepted connection from ('127.0.0.1', 57444)
-2023-11-09 21:57:26,817 - INFO - Handshake was successful!
-2023-11-09 21:57:26,888 - INFO - Received successfully Master Key and IV.
-2023-11-09 21:57:27,312 - ERROR - An error occurred: 'TraceProcessor' object has no attribute 'data_type_to_dtype'
-2023-11-09 21:59:12,189 - INFO - Accepted connection from ('127.0.0.1', 57599)
-2023-11-09 21:59:12,189 - INFO - Handshake was successful!
-2023-11-09 21:59:12,285 - INFO - Received successfully Master Key and IV.
-2023-11-09 21:59:13,438 - INFO - Accepted connection from ('127.0.0.1', 57605)
-2023-11-09 21:59:13,443 - INFO - Handshake was successful!
-2023-11-09 21:59:13,568 - INFO - Received successfully Master Key and IV.
-2023-11-09 22:00:28,362 - INFO - Accepted connection from ('127.0.0.1', 57677)
-2023-11-09 22:00:28,362 - INFO - Handshake was successful!
-2023-11-09 22:00:28,467 - INFO - Received successfully Master Key and IV.
-2023-11-09 22:00:29,632 - INFO - Accepted connection from ('127.0.0.1', 57686)
-2023-11-09 22:00:29,632 - INFO - Handshake was successful!
-2023-11-09 22:00:29,695 - INFO - Received successfully Master Key and IV.
-2023-11-09 22:09:53,612 - INFO - Accepted connection from ('127.0.0.1', 58076)
-2023-11-09 22:09:53,612 - INFO - Handshake was successful!
-2023-11-09 22:09:53,691 - INFO - Received successfully Master Key and IV.
-2023-11-09 22:09:54,879 - INFO - Accepted connection from ('127.0.0.1', 58080)
-2023-11-09 22:09:54,888 - INFO - Handshake was successful!
-2023-11-09 22:09:54,937 - INFO - Received successfully Master Key and IV.
-2023-11-09 22:11:09,923 - INFO - Accepted connection from ('127.0.0.1', 58140)
-2023-11-09 22:11:09,939 - INFO - Handshake was successful!
-2023-11-09 22:11:10,016 - INFO - Received successfully Master Key and IV.
-2023-11-09 22:11:10,846 - INFO - Accepted connection from ('127.0.0.1', 58147)
-2023-11-09 22:11:10,862 - INFO - Handshake was successful!
-2023-11-09 22:11:10,915 - INFO - Received successfully Master Key and IV.
-2023-11-09 22:12:05,904 - INFO - Accepted connection from ('127.0.0.1', 58196)
-2023-11-09 22:12:05,904 - INFO - Handshake was successful!
-2023-11-09 22:12:05,979 - INFO - Received successfully Master Key and IV.
-2023-11-09 22:12:06,783 - INFO - Accepted connection from ('127.0.0.1', 58203)
-2023-11-09 22:12:06,799 - INFO - Handshake was successful!
-2023-11-09 22:12:06,846 - INFO - Received successfully Master Key and IV.
-2023-11-09 22:15:11,279 - INFO - Accepted connection from ('127.0.0.1', 58332)
-2023-11-09 22:15:11,279 - INFO - Handshake was successful!
-2023-11-09 22:15:11,341 - INFO - Received successfully Master Key and IV.
-2023-11-09 22:15:12,321 - INFO - Accepted connection from ('127.0.0.1', 58337)
-2023-11-09 22:15:12,337 - INFO - Handshake was successful!
-2023-11-09 22:15:12,401 - INFO - Received successfully Master Key and IV.
-2023-11-09 22:16:30,301 - INFO - Accepted connection from ('127.0.0.1', 58424)
-2023-11-09 22:16:30,310 - INFO - Handshake was successful!
-2023-11-09 22:16:30,376 - INFO - Received successfully Master Key and IV.
-2023-11-09 22:16:31,354 - INFO - Accepted connection from ('127.0.0.1', 58433)
-2023-11-09 22:16:31,354 - INFO - Handshake was successful!
-2023-11-09 22:16:31,422 - INFO - Received successfully Master Key and IV.
-2023-11-09 23:13:51,732 - INFO - Accepted connection from ('127.0.0.1', 59729)
-2023-11-09 23:13:51,732 - INFO - Handshake was successful!
-2023-11-09 23:13:51,804 - INFO - Received successfully Master Key and IV.
-2023-11-09 23:13:55,528 - INFO - Accepted connection from ('127.0.0.1', 59743)
-2023-11-09 23:13:55,536 - INFO - Handshake was successful!
-2023-11-09 23:13:55,589 - INFO - Received successfully Master Key and IV.
-2023-11-09 23:13:56,712 - INFO - Accepted connection from ('127.0.0.1', 59752)
-2023-11-09 23:13:56,726 - INFO - Handshake was successful!
-2023-11-09 23:13:56,808 - INFO - Received successfully Master Key and IV.
-2023-11-09 23:24:10,740 - INFO - Accepted connection from ('127.0.0.1', 60061)
-2023-11-09 23:24:10,740 - INFO - Handshake was successful!
-2023-11-09 23:24:10,833 - INFO - Received successfully Master Key and IV.
-2023-11-09 23:24:10,973 - ERROR - An error occurred: Ciphertext with incorrect length.
-2023-11-09 23:24:11,776 - INFO - Accepted connection from ('127.0.0.1', 60069)
-2023-11-09 23:24:11,776 - INFO - Handshake was successful!
-2023-11-09 23:24:11,840 - INFO - Received successfully Master Key and IV.
-2023-11-09 23:24:12,002 - ERROR - An error occurred: Ciphertext with incorrect length.
-2023-11-09 23:26:59,407 - INFO - Accepted connection from ('127.0.0.1', 60176)
-2023-11-09 23:26:59,407 - INFO - Handshake was successful!
-2023-11-09 23:26:59,504 - INFO - Received successfully Master Key and IV.
-2023-11-09 23:27:00,438 - INFO - Accepted connection from ('127.0.0.1', 60186)
-2023-11-09 23:27:00,454 - INFO - Handshake was successful!
-2023-11-09 23:27:00,506 - INFO - Received successfully Master Key and IV.
-2023-11-09 23:30:09,056 - INFO - Accepted connection from ('127.0.0.1', 60357)
-2023-11-09 23:30:09,064 - INFO - Handshake was successful!
-2023-11-09 23:30:09,157 - INFO - Received successfully Master Key and IV.
-2023-11-09 23:30:12,146 - INFO - Accepted connection from ('127.0.0.1', 60373)
-2023-11-09 23:30:12,146 - INFO - Handshake was successful!
-2023-11-09 23:30:12,209 - INFO - Received successfully Master Key and IV.
-2023-11-09 23:30:13,111 - INFO - Accepted connection from ('127.0.0.1', 60380)
-2023-11-09 23:30:13,111 - INFO - Handshake was successful!
-2023-11-09 23:30:13,183 - INFO - Received successfully Master Key and IV.
-2023-11-09 23:32:02,496 - INFO - Accepted connection from ('127.0.0.1', 60437)
-2023-11-09 23:32:02,511 - INFO - Handshake was successful!
-2023-11-09 23:32:02,574 - INFO - Received successfully Master Key and IV.
-2023-11-09 23:32:03,634 - INFO - Accepted connection from ('127.0.0.1', 60447)
-2023-11-09 23:32:03,643 - INFO - Handshake was successful!
-2023-11-09 23:32:03,704 - INFO - Received successfully Master Key and IV.
+2023-11-11 22:29:38,995 - INFO - Accepted connection from ('127.0.0.1', 59631)
+2023-11-11 22:29:39,000 - INFO - Handshake was successful!
+2023-11-11 22:29:39,085 - ERROR - TLS handshake error: 
+2023-11-11 22:29:58,950 - INFO - Accepted connection from ('127.0.0.1', 59666)
+2023-11-11 22:29:58,958 - INFO - Handshake was successful!
+2023-11-11 22:29:59,035 - ERROR - TLS handshake error: 
+2023-11-11 22:35:02,604 - INFO - Accepted connection from ('127.0.0.1', 59800)
+2023-11-11 22:35:02,604 - INFO - Handshake was successful!
+2023-11-11 22:35:02,671 - ERROR - TLS handshake error: 
+2023-11-11 22:35:56,906 - INFO - Accepted connection from ('127.0.0.1', 59871)
+2023-11-11 22:35:56,906 - INFO - Handshake was successful!
+2023-11-11 22:35:56,993 - ERROR - TLS handshake error: 
+2023-11-11 22:39:01,144 - INFO - Accepted connection from ('127.0.0.1', 59983)
+2023-11-11 22:39:01,144 - INFO - Handshake was successful!
+2023-11-11 22:39:01,229 - ERROR - TLS handshake error: 
+Traceback (most recent call last):
+  File "C:\Users\Marios Stefanidis\Documents\GitHub\Diploma-Thesis\code\seedlink-server\decryption\ssl_con.py", line 115, in handle_client
+    encrypted_master_key = ssl_socket.recv(4096)
+                           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Marios Stefanidis\AppData\Local\Programs\Python\Python311\Lib\site-packages\OpenSSL\SSL.py", line 2076, in recv
+    self._raise_ssl_error(self._ssl, result)
+  File "C:\Users\Marios Stefanidis\AppData\Local\Programs\Python\Python311\Lib\site-packages\OpenSSL\SSL.py", line 1814, in _raise_ssl_error
+    raise ZeroReturnError()
+OpenSSL.SSL.ZeroReturnError
+2023-11-11 22:41:27,958 - INFO - Accepted connection from ('127.0.0.1', 60030)
+2023-11-11 22:41:27,966 - INFO - Handshake was successful!
+2023-11-11 22:41:28,031 - ERROR - TLS handshake error: 
+Traceback (most recent call last):
+  File "C:\Users\Marios Stefanidis\Documents\GitHub\Diploma-Thesis\code\seedlink-server\decryption\ssl_con.py", line 115, in handle_client
+    encrypted_master_key = ssl_socket.recv(4096)
+                           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Marios Stefanidis\AppData\Local\Programs\Python\Python311\Lib\site-packages\OpenSSL\SSL.py", line 2076, in recv
+    self._raise_ssl_error(self._ssl, result)
+  File "C:\Users\Marios Stefanidis\AppData\Local\Programs\Python\Python311\Lib\site-packages\OpenSSL\SSL.py", line 1814, in _raise_ssl_error
+    raise ZeroReturnError()
+OpenSSL.SSL.ZeroReturnError
+2023-11-11 22:42:22,224 - INFO - Accepted connection from ('127.0.0.1', 60138)
+2023-11-11 22:42:22,230 - INFO - Handshake was successful!
+2023-11-11 22:42:22,286 - ERROR - TLS handshake error: 
+Traceback (most recent call last):
+  File "C:\Users\Marios Stefanidis\Documents\GitHub\Diploma-Thesis\code\seedlink-server\decryption\ssl_con.py", line 115, in handle_client
+    encrypted_master_key = ssl_socket.recv(4096)
+                           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Marios Stefanidis\AppData\Local\Programs\Python\Python311\Lib\site-packages\OpenSSL\SSL.py", line 2076, in recv
+    self._raise_ssl_error(self._ssl, result)
+  File "C:\Users\Marios Stefanidis\AppData\Local\Programs\Python\Python311\Lib\site-packages\OpenSSL\SSL.py", line 1814, in _raise_ssl_error
+    raise ZeroReturnError()
+OpenSSL.SSL.ZeroReturnError
+2023-11-11 22:49:58,537 - INFO - Accepted connection from ('127.0.0.1', 60350)
+2023-11-11 22:49:58,552 - INFO - Handshake was successful!
+2023-11-11 22:49:58,646 - INFO - Received successfully Master Key and IV.
+2023-11-11 22:49:58,838 - INFO - Received the encrypted data
+2023-11-11 22:49:59,018 - ERROR - An error occured: The authenticaiton tag is invalid.
+Traceback (most recent call last):
+  File "C:\Users\Marios Stefanidis\Documents\GitHub\Diploma-Thesis\code\seedlink-server\decryption\ssl_con.py", line 137, in handle_client
+    restored_trace = self.decrypt_received_data(master_key, iv, received_data)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Marios Stefanidis\Documents\GitHub\Diploma-Thesis\code\seedlink-server\decryption\ssl_con.py", line 87, in decrypt_received_data
+    decrypted_data = processor.decrypt_trace(received_data)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Marios Stefanidis\Documents\GitHub\Diploma-Thesis\code\seedlink-server\decryption\processor.py", line 74, in decrypt_trace
+    return my_gcm.decrypt(self.init_value, encrypted_trace[:-16], auth_tag)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Marios Stefanidis\Documents\GitHub\Diploma-Thesis\code\seedlink-server\decryption\aes_gcm.py", line 234, in decrypt
+    raise InvalidTagException
+aes_gcm.InvalidTagException: The authenticaiton tag is invalid.
+2023-11-11 22:52:19,638 - INFO - Accepted connection from ('127.0.0.1', 60453)
+2023-11-11 22:52:19,638 - INFO - Handshake was successful!
+2023-11-11 22:52:19,807 - INFO - Received successfully Master Key and IV.
+2023-11-11 22:52:19,992 - INFO - Received the encrypted data
+2023-11-11 22:52:20,153 - ERROR - An error occured: The authenticaiton tag is invalid.
+Traceback (most recent call last):
+  File "C:\Users\Marios Stefanidis\Documents\GitHub\Diploma-Thesis\code\seedlink-server\decryption\ssl_con.py", line 140, in handle_client
+    restored_trace = self.decrypt_received_data(master_key, iv, received_data)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Marios Stefanidis\Documents\GitHub\Diploma-Thesis\code\seedlink-server\decryption\ssl_con.py", line 90, in decrypt_received_data
+    decrypted_data = processor.decrypt_trace(received_data)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Marios Stefanidis\Documents\GitHub\Diploma-Thesis\code\seedlink-server\decryption\processor.py", line 74, in decrypt_trace
+    return my_gcm.decrypt(self.init_value, encrypted_trace[:-16], auth_tag)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Marios Stefanidis\Documents\GitHub\Diploma-Thesis\code\seedlink-server\decryption\aes_gcm.py", line 234, in decrypt
+    raise InvalidTagException
+aes_gcm.InvalidTagException: The authenticaiton tag is invalid.
+2023-11-11 22:57:09,197 - INFO - Accepted connection from ('127.0.0.1', 61072)
+2023-11-11 22:57:09,205 - INFO - Handshake was successful!
+2023-11-11 22:57:09,306 - INFO - Received successfully Master Key and IV.
+2023-11-11 22:57:09,496 - INFO - Received the encrypted data
