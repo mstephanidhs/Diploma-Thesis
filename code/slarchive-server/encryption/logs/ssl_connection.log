@@ -1,0 +1,73 @@
+2023-11-11 22:21:52,124 - INFO - Handshake was successful!
+2023-11-11 22:21:52,135 - ERROR - An error occurred: object of type 'int' has no len()
+2023-11-11 22:21:52,140 - INFO - SLL Connection closed!
+2023-11-11 22:21:52,899 - INFO - Handshake was successful!
+2023-11-11 22:21:52,916 - ERROR - An error occurred: object of type 'int' has no len()
+2023-11-11 22:21:52,916 - INFO - SLL Connection closed!
+2023-11-11 22:23:49,021 - INFO - Handshake was successful!
+2023-11-11 22:23:49,037 - ERROR - An error occurred: object of type 'int' has no len()
+2023-11-11 22:23:49,037 - INFO - SLL Connection closed!
+2023-11-11 22:23:49,878 - INFO - Handshake was successful!
+2023-11-11 22:23:49,894 - ERROR - An error occurred: object of type 'int' has no len()
+2023-11-11 22:23:49,894 - INFO - SLL Connection closed!
+2023-11-11 22:24:09,466 - INFO - Handshake was successful!
+2023-11-11 22:24:09,466 - ERROR - An error occurred: object of type 'int' has no len()
+2023-11-11 22:24:09,466 - INFO - SLL Connection closed!
+2023-11-11 22:24:10,411 - INFO - Handshake was successful!
+2023-11-11 22:24:10,428 - ERROR - An error occurred: object of type 'int' has no len()
+2023-11-11 22:24:10,428 - INFO - SLL Connection closed!
+2023-11-11 22:28:23,724 - INFO - Handshake was successful!
+2023-11-11 22:28:23,739 - ERROR - An error occurred: object of type 'int' has no len()
+2023-11-11 22:28:23,739 - INFO - SLL Connection closed!
+2023-11-11 22:29:16,457 - INFO - Handshake was successful!
+2023-11-11 22:29:16,473 - ERROR - An error occurred: object of type 'int' has no len()
+2023-11-11 22:29:16,473 - INFO - SLL Connection closed!
+2023-11-11 22:29:39,000 - INFO - Handshake was successful!
+2023-11-11 22:29:39,014 - ERROR - An error occurred: object of type 'int' has no len()
+2023-11-11 22:29:39,014 - INFO - SLL Connection closed!
+2023-11-11 22:29:58,958 - INFO - Handshake was successful!
+2023-11-11 22:29:58,974 - ERROR - An error occurred: object of type 'int' has no len()
+2023-11-11 22:29:58,974 - INFO - SLL Connection closed!
+2023-11-11 22:35:02,604 - INFO - Handshake was successful!
+2023-11-11 22:35:02,612 - ERROR - An error occurred: object of type 'int' has no len()
+2023-11-11 22:35:02,612 - INFO - SLL Connection closed!
+2023-11-11 22:35:56,906 - INFO - Handshake was successful!
+2023-11-11 22:35:56,925 - ERROR - An error occurred: object of type 'int' has no len()
+2023-11-11 22:35:56,925 - INFO - SLL Connection closed!
+2023-11-11 22:39:01,144 - INFO - Handshake was successful!
+2023-11-11 22:39:01,160 - ERROR - An error occurred: object of type 'int' has no len()
+2023-11-11 22:39:01,160 - INFO - SLL Connection closed!
+2023-11-11 22:41:27,966 - INFO - Handshake was successful!
+2023-11-11 22:41:27,979 - ERROR - An error occurred: object of type 'int' has no len()
+2023-11-11 22:41:27,979 - INFO - SLL Connection closed!
+2023-11-11 22:42:22,230 - INFO - Handshake was successful!
+2023-11-11 22:42:22,244 - ERROR - An error occurred: object of type 'int' has no len()
+Traceback (most recent call last):
+  File "C:\Users\Marios Stefanidis\Documents\GitHub\Diploma-Thesis\code\slarchive-server\encryption\ssl_con.py", line 133, in run
+    self.send_encrypted_data()
+  File "C:\Users\Marios Stefanidis\Documents\GitHub\Diploma-Thesis\code\slarchive-server\encryption\ssl_con.py", line 100, in send_encrypted_data
+    encrypted_master_key = cipher.encrypt(master_key)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Marios Stefanidis\AppData\Local\Programs\Python\Python311\Lib\site-packages\Crypto\Cipher\PKCS1_OAEP.py", line 110, in encrypt
+    mLen = len(message)
+           ^^^^^^^^^^^^
+TypeError: object of type 'int' has no len()
+2023-11-11 22:42:22,244 - INFO - SLL Connection closed!
+2023-11-11 22:49:58,552 - INFO - Handshake was successful!
+2023-11-11 22:49:58,562 - INFO - Master Key and IV were successfully sent.
+2023-11-11 22:49:58,831 - INFO - Encryption process completed for source file: .\..\archive\2023\ZW\ITSC\EHN.D\ZW.ITSC.00.EHN.D.2023.295.
+2023-11-11 22:49:58,834 - INFO - Total Size of Data and Chunk Size were successfully sent.
+2023-11-11 22:49:58,836 - INFO - Encrypted data were sent successfully.
+2023-11-11 22:49:58,836 - INFO - SLL Connection closed!
+2023-11-11 22:52:19,638 - INFO - Handshake was successful!
+2023-11-11 22:52:19,665 - INFO - Master Key and IV were successfully sent.
+2023-11-11 22:52:19,982 - INFO - Encryption process completed for source file: .\..\archive\2023\ZW\ITSC\EHN.D\ZW.ITSC.00.EHN.D.2023.295.
+2023-11-11 22:52:19,982 - INFO - Total Size of Data and Chunk Size were successfully sent.
+2023-11-11 22:52:19,982 - INFO - Encrypted data were sent successfully.
+2023-11-11 22:52:19,982 - INFO - SLL Connection closed!
+2023-11-11 22:57:09,205 - INFO - Handshake was successful!
+2023-11-11 22:57:09,232 - INFO - Master Key and IV were successfully sent.
+2023-11-11 22:57:09,482 - INFO - Encryption process completed for source file: .\..\archive\2023\ZW\ITSC\EHN.D\ZW.ITSC.00.EHN.D.2023.295.
+2023-11-11 22:57:09,482 - INFO - Total Size of Data and Chunk Size were successfully sent.
+2023-11-11 22:57:09,482 - INFO - Encrypted data were sent successfully.
+2023-11-11 22:57:09,482 - INFO - SLL Connection closed!

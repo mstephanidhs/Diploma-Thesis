@@ -1,8 +1,7 @@
 import time
-import re
-import os
 import subprocess
 import logging
+import os
 
 from watchdog.observers import Observer
 from watchdog.events import FileSystemEventHandler
@@ -35,26 +34,16 @@ class Handler(FileSystemEventHandler):
   @staticmethod
   def on_modified(event):
     
-    # The directory where the encrypted data will be stored
-    toSaveDirectory = ".\\..\\archive_encrypt"
-    # Location of the encryption script
-    encryptionScript = ".\\encrypt_data.py"
+    # Location of the script to be executed
+    encryptionScript = ".\\ssl_con.py"
     
     if not event.is_directory:
       
       message = "Watchdog received event - %s." % event.src_path
       logging.info(message)
       
-      # Split the path by backlashes and remove empty parts
-      path_parts = [part for part in re.split(r'[\\/]', event.src_path) if part]
-      
-      # Build the target directory structure in archive_encrypt folder
-      target_dir = "\\".join(path_parts[3:-1])
-      full_path = os.path.join(toSaveDirectory, target_dir)
-      os.makedirs(full_path, exist_ok=True)
-      
       # Pass the seismic data to the encryption script
-      subprocess.run(['python', encryptionScript, event.src_path, os.path.join(full_path, os.path.basename(event.src_path))])
+      subprocess.run(['python', encryptionScript, event.src_path])
       
 if __name__ == '__main__':
   watch = OnMyWatch()

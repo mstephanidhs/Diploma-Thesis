@@ -66,7 +66,7 @@ class TraceProcessor:
     
     # Extract the auth tag that is stored at the end of the encrypted_trace
     auth_tag_bytes = encrypted_trace[-16:]
-    
+  
     # Convert the auth tag back to an integer
     auth_tag = int.from_bytes(auth_tag_bytes, byteorder='big')
     
