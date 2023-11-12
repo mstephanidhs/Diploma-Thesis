@@ -28,3 +28,30 @@
 2023-11-12 13:26:16,341 - WARNING - Rejected connection from ('127.0.0.1', 55133)
 2023-11-12 13:27:44,067 - WARNING - Rejected connection from ('127.0.0.1', 55223)
 2023-11-12 13:27:44,617 - WARNING - Rejected connection from ('127.0.0.1', 55227)
+2023-11-12 13:38:32,678 - WARNING - Rejected connection from ('127.0.0.1', 56678)
+2023-11-12 13:38:33,264 - WARNING - Rejected connection from ('127.0.0.1', 56682)
+2023-11-12 13:39:19,877 - INFO - Accepted connection from ('127.0.0.1', 56772)
+2023-11-12 13:39:19,883 - INFO - Handshake was successful!
+2023-11-12 13:39:19,955 - INFO - Received successfully Master Key and IV.
+2023-11-12 13:39:20,109 - INFO - Received the encrypted data
+2023-11-12 13:39:20,336 - INFO - Trace was stored successfully
+2023-11-12 13:39:21,093 - INFO - Accepted connection from ('127.0.0.1', 56784)
+2023-11-12 13:39:21,097 - INFO - Handshake was successful!
+2023-11-12 13:39:21,142 - INFO - Received successfully Master Key and IV.
+2023-11-12 13:39:21,318 - INFO - Received the encrypted data
+2023-11-12 13:39:21,482 - INFO - Trace was stored successfully
+2023-11-12 18:44:57,717 - INFO - Accepted connection from ('127.0.0.1', 55857)
+2023-11-12 18:44:57,727 - INFO - Handshake was successful!
+2023-11-12 18:44:57,836 - INFO - Received successfully Master Key and IV.
+2023-11-12 18:44:58,016 - INFO - Received the encrypted data
+2023-11-12 18:44:58,267 - INFO - Trace was stored successfully
+2023-11-12 18:48:30,362 - INFO - Accepted connection from ('127.0.0.1', 55971)
+2023-11-12 18:48:30,378 - INFO - Handshake was successful!
+2023-11-12 18:48:30,466 - INFO - Received successfully Master Key and IV.
+2023-11-12 18:48:30,648 - INFO - Received the encrypted data
+2023-11-12 18:48:30,932 - INFO - Trace was stored successfully
+2023-11-12 18:48:31,749 - INFO - Accepted connection from ('127.0.0.1', 55979)
+2023-11-12 18:48:31,749 - INFO - Handshake was successful!
+2023-11-12 18:48:31,865 - INFO - Received successfully Master Key and IV.
+2023-11-12 18:48:31,997 - INFO - Received the encrypted data
+2023-11-12 18:48:32,342 - INFO - Trace was stored successfully
