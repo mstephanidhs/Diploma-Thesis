@@ -1,11 +1,12 @@
 import socket
 import logging
-from secrets import token_bytes
 import sys
+import os
 
 from OpenSSL import SSL
 from Crypto.PublicKey import RSA
 from Crypto.Cipher import PKCS1_OAEP
+from secrets import token_bytes
 
 from encrypt_data import DataEncryption
 
@@ -82,6 +83,11 @@ class SSLEncryptionClient:
       
   def generate_random_key(self, size):
     return int.from_bytes(token_bytes(size), byteorder='big')
+  
+  def filename_bytes(self):
+    last_item = os.path.basename(self.source_file)
+    last_item_bytes = last_item.encode('utf-8')
+    return last_item_bytes
       
   def send_encrypted_data(self):
     # Receive the server's public key
@@ -128,13 +134,26 @@ class SSLEncryptionClient:
     self.send_chunk_encrypted_data(total_data_size, encrypted_data, chunk_size)
       
     logging.info("Encrypted data were sent successfully.")
+    
+    last_item_bytes = self.filename_bytes()
+    encrypted_last_item = cipher.encrypt(last_item_bytes)
+    self.ssl_socket.send(encrypted_last_item)
+    
+    logging.info("Filename encrypted and sent successfully.")
       
   def run(self):
     try:
       self.connect()
       self.establish_ssl_connection()
       
+      # Send encrypted data to the server
       self.send_encrypted_data()
+      
+      # Receive rejection message if connection is rejected
+      rejection_message = self.ssl_socket.recv(4096)
+      if rejection_message:
+        logging.error(f'Connection rejected: {rejection_message.decode()}')
+        return 
       
     except SSL.Error as e:
       logging.error(f"TLS handshake error: {e}", exc_info=True)
@@ -145,13 +164,20 @@ class SSLEncryptionClient:
       self.close()
       
   def close(self):
-    if self.ssl_socket:
-      self.ssl_socket.shutdown()
-      self.ssl_socket.close()
-    if self.client_socket:
-      self.client_socket.close()
-      
-    logging.info("SLL Connection closed!")
+    try:
+        if self.ssl_socket:
+            # Close the SSL socket, which implicitly shuts it down
+            self.ssl_socket.close()
+    except SSL.Error as e:
+        # Log the error if it's not the expected exception
+        if 'shutdown while in init' not in str(e):
+            logging.error(f"Error during SSL socket close: {e}", exc_info=True)
+    finally:
+        # Close the client socket
+        if self.client_socket:
+            self.client_socket.close()
+
+        logging.info("SSL Connection closed!")
       
 if __name__ == '__main__':
       

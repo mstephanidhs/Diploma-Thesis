@@ -1,73 +1,282 @@
-2023-11-11 22:21:52,124 - INFO - Handshake was successful!
-2023-11-11 22:21:52,135 - ERROR - An error occurred: object of type 'int' has no len()
-2023-11-11 22:21:52,140 - INFO - SLL Connection closed!
-2023-11-11 22:21:52,899 - INFO - Handshake was successful!
-2023-11-11 22:21:52,916 - ERROR - An error occurred: object of type 'int' has no len()
-2023-11-11 22:21:52,916 - INFO - SLL Connection closed!
-2023-11-11 22:23:49,021 - INFO - Handshake was successful!
-2023-11-11 22:23:49,037 - ERROR - An error occurred: object of type 'int' has no len()
-2023-11-11 22:23:49,037 - INFO - SLL Connection closed!
-2023-11-11 22:23:49,878 - INFO - Handshake was successful!
-2023-11-11 22:23:49,894 - ERROR - An error occurred: object of type 'int' has no len()
-2023-11-11 22:23:49,894 - INFO - SLL Connection closed!
-2023-11-11 22:24:09,466 - INFO - Handshake was successful!
-2023-11-11 22:24:09,466 - ERROR - An error occurred: object of type 'int' has no len()
-2023-11-11 22:24:09,466 - INFO - SLL Connection closed!
-2023-11-11 22:24:10,411 - INFO - Handshake was successful!
-2023-11-11 22:24:10,428 - ERROR - An error occurred: object of type 'int' has no len()
-2023-11-11 22:24:10,428 - INFO - SLL Connection closed!
-2023-11-11 22:28:23,724 - INFO - Handshake was successful!
-2023-11-11 22:28:23,739 - ERROR - An error occurred: object of type 'int' has no len()
-2023-11-11 22:28:23,739 - INFO - SLL Connection closed!
-2023-11-11 22:29:16,457 - INFO - Handshake was successful!
-2023-11-11 22:29:16,473 - ERROR - An error occurred: object of type 'int' has no len()
-2023-11-11 22:29:16,473 - INFO - SLL Connection closed!
-2023-11-11 22:29:39,000 - INFO - Handshake was successful!
-2023-11-11 22:29:39,014 - ERROR - An error occurred: object of type 'int' has no len()
-2023-11-11 22:29:39,014 - INFO - SLL Connection closed!
-2023-11-11 22:29:58,958 - INFO - Handshake was successful!
-2023-11-11 22:29:58,974 - ERROR - An error occurred: object of type 'int' has no len()
-2023-11-11 22:29:58,974 - INFO - SLL Connection closed!
-2023-11-11 22:35:02,604 - INFO - Handshake was successful!
-2023-11-11 22:35:02,612 - ERROR - An error occurred: object of type 'int' has no len()
-2023-11-11 22:35:02,612 - INFO - SLL Connection closed!
-2023-11-11 22:35:56,906 - INFO - Handshake was successful!
-2023-11-11 22:35:56,925 - ERROR - An error occurred: object of type 'int' has no len()
-2023-11-11 22:35:56,925 - INFO - SLL Connection closed!
-2023-11-11 22:39:01,144 - INFO - Handshake was successful!
-2023-11-11 22:39:01,160 - ERROR - An error occurred: object of type 'int' has no len()
-2023-11-11 22:39:01,160 - INFO - SLL Connection closed!
-2023-11-11 22:41:27,966 - INFO - Handshake was successful!
-2023-11-11 22:41:27,979 - ERROR - An error occurred: object of type 'int' has no len()
-2023-11-11 22:41:27,979 - INFO - SLL Connection closed!
-2023-11-11 22:42:22,230 - INFO - Handshake was successful!
-2023-11-11 22:42:22,244 - ERROR - An error occurred: object of type 'int' has no len()
+2023-11-12 13:07:46,163 - ERROR - TLS handshake error: (10053, 'WSAECONNABORTED')
 Traceback (most recent call last):
-  File "C:\Users\Marios Stefanidis\Documents\GitHub\Diploma-Thesis\code\slarchive-server\encryption\ssl_con.py", line 133, in run
-    self.send_encrypted_data()
-  File "C:\Users\Marios Stefanidis\Documents\GitHub\Diploma-Thesis\code\slarchive-server\encryption\ssl_con.py", line 100, in send_encrypted_data
-    encrypted_master_key = cipher.encrypt(master_key)
-                           ^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\Marios Stefanidis\AppData\Local\Programs\Python\Python311\Lib\site-packages\Crypto\Cipher\PKCS1_OAEP.py", line 110, in encrypt
-    mLen = len(message)
-           ^^^^^^^^^^^^
-TypeError: object of type 'int' has no len()
-2023-11-11 22:42:22,244 - INFO - SLL Connection closed!
-2023-11-11 22:49:58,552 - INFO - Handshake was successful!
-2023-11-11 22:49:58,562 - INFO - Master Key and IV were successfully sent.
-2023-11-11 22:49:58,831 - INFO - Encryption process completed for source file: .\..\archive\2023\ZW\ITSC\EHN.D\ZW.ITSC.00.EHN.D.2023.295.
-2023-11-11 22:49:58,834 - INFO - Total Size of Data and Chunk Size were successfully sent.
-2023-11-11 22:49:58,836 - INFO - Encrypted data were sent successfully.
-2023-11-11 22:49:58,836 - INFO - SLL Connection closed!
-2023-11-11 22:52:19,638 - INFO - Handshake was successful!
-2023-11-11 22:52:19,665 - INFO - Master Key and IV were successfully sent.
-2023-11-11 22:52:19,982 - INFO - Encryption process completed for source file: .\..\archive\2023\ZW\ITSC\EHN.D\ZW.ITSC.00.EHN.D.2023.295.
-2023-11-11 22:52:19,982 - INFO - Total Size of Data and Chunk Size were successfully sent.
-2023-11-11 22:52:19,982 - INFO - Encrypted data were sent successfully.
-2023-11-11 22:52:19,982 - INFO - SLL Connection closed!
-2023-11-11 22:57:09,205 - INFO - Handshake was successful!
-2023-11-11 22:57:09,232 - INFO - Master Key and IV were successfully sent.
-2023-11-11 22:57:09,482 - INFO - Encryption process completed for source file: .\..\archive\2023\ZW\ITSC\EHN.D\ZW.ITSC.00.EHN.D.2023.295.
-2023-11-11 22:57:09,482 - INFO - Total Size of Data and Chunk Size were successfully sent.
-2023-11-11 22:57:09,482 - INFO - Encrypted data were sent successfully.
-2023-11-11 22:57:09,482 - INFO - SLL Connection closed!
+  File "C:\Users\Marios Stefanidis\Documents\GitHub\Diploma-Thesis\code\slarchive-server\encryption\ssl_con.py", line 147, in run
+    self.establish_ssl_connection()
+  File "C:\Users\Marios Stefanidis\Documents\GitHub\Diploma-Thesis\code\slarchive-server\encryption\ssl_con.py", line 38, in establish_ssl_connection
+    self.ssl_socket.do_handshake()
+  File "C:\Users\Marios Stefanidis\AppData\Local\Programs\Python\Python311\Lib\site-packages\OpenSSL\SSL.py", line 2202, in do_handshake
+    self._raise_ssl_error(self._ssl, result)
+  File "C:\Users\Marios Stefanidis\AppData\Local\Programs\Python\Python311\Lib\site-packages\OpenSSL\SSL.py", line 1827, in _raise_ssl_error
+    raise SysCallError(errno, errorcode.get(errno))
+OpenSSL.SSL.SysCallError: (10053, 'WSAECONNABORTED')
+2023-11-12 13:07:46,739 - ERROR - TLS handshake error: (10053, 'WSAECONNABORTED')
+Traceback (most recent call last):
+  File "C:\Users\Marios Stefanidis\Documents\GitHub\Diploma-Thesis\code\slarchive-server\encryption\ssl_con.py", line 147, in run
+    self.establish_ssl_connection()
+  File "C:\Users\Marios Stefanidis\Documents\GitHub\Diploma-Thesis\code\slarchive-server\encryption\ssl_con.py", line 38, in establish_ssl_connection
+    self.ssl_socket.do_handshake()
+  File "C:\Users\Marios Stefanidis\AppData\Local\Programs\Python\Python311\Lib\site-packages\OpenSSL\SSL.py", line 2202, in do_handshake
+    self._raise_ssl_error(self._ssl, result)
+  File "C:\Users\Marios Stefanidis\AppData\Local\Programs\Python\Python311\Lib\site-packages\OpenSSL\SSL.py", line 1827, in _raise_ssl_error
+    raise SysCallError(errno, errorcode.get(errno))
+OpenSSL.SSL.SysCallError: (10053, 'WSAECONNABORTED')
+2023-11-12 13:08:32,976 - ERROR - TLS handshake error: (10053, 'WSAECONNABORTED')
+Traceback (most recent call last):
+  File "C:\Users\Marios Stefanidis\Documents\GitHub\Diploma-Thesis\code\slarchive-server\encryption\ssl_con.py", line 147, in run
+    self.establish_ssl_connection()
+  File "C:\Users\Marios Stefanidis\Documents\GitHub\Diploma-Thesis\code\slarchive-server\encryption\ssl_con.py", line 38, in establish_ssl_connection
+    self.ssl_socket.do_handshake()
+  File "C:\Users\Marios Stefanidis\AppData\Local\Programs\Python\Python311\Lib\site-packages\OpenSSL\SSL.py", line 2202, in do_handshake
+    self._raise_ssl_error(self._ssl, result)
+  File "C:\Users\Marios Stefanidis\AppData\Local\Programs\Python\Python311\Lib\site-packages\OpenSSL\SSL.py", line 1827, in _raise_ssl_error
+    raise SysCallError(errno, errorcode.get(errno))
+OpenSSL.SSL.SysCallError: (10053, 'WSAECONNABORTED')
+2023-11-12 13:08:33,548 - ERROR - TLS handshake error: (10053, 'WSAECONNABORTED')
+Traceback (most recent call last):
+  File "C:\Users\Marios Stefanidis\Documents\GitHub\Diploma-Thesis\code\slarchive-server\encryption\ssl_con.py", line 147, in run
+    self.establish_ssl_connection()
+  File "C:\Users\Marios Stefanidis\Documents\GitHub\Diploma-Thesis\code\slarchive-server\encryption\ssl_con.py", line 38, in establish_ssl_connection
+    self.ssl_socket.do_handshake()
+  File "C:\Users\Marios Stefanidis\AppData\Local\Programs\Python\Python311\Lib\site-packages\OpenSSL\SSL.py", line 2202, in do_handshake
+    self._raise_ssl_error(self._ssl, result)
+  File "C:\Users\Marios Stefanidis\AppData\Local\Programs\Python\Python311\Lib\site-packages\OpenSSL\SSL.py", line 1827, in _raise_ssl_error
+    raise SysCallError(errno, errorcode.get(errno))
+OpenSSL.SSL.SysCallError: (10053, 'WSAECONNABORTED')
+2023-11-12 13:09:32,608 - ERROR - TLS handshake error: (10053, 'WSAECONNABORTED')
+Traceback (most recent call last):
+  File "C:\Users\Marios Stefanidis\Documents\GitHub\Diploma-Thesis\code\slarchive-server\encryption\ssl_con.py", line 147, in run
+    self.establish_ssl_connection()
+  File "C:\Users\Marios Stefanidis\Documents\GitHub\Diploma-Thesis\code\slarchive-server\encryption\ssl_con.py", line 38, in establish_ssl_connection
+    self.ssl_socket.do_handshake()
+  File "C:\Users\Marios Stefanidis\AppData\Local\Programs\Python\Python311\Lib\site-packages\OpenSSL\SSL.py", line 2202, in do_handshake
+    self._raise_ssl_error(self._ssl, result)
+  File "C:\Users\Marios Stefanidis\AppData\Local\Programs\Python\Python311\Lib\site-packages\OpenSSL\SSL.py", line 1827, in _raise_ssl_error
+    raise SysCallError(errno, errorcode.get(errno))
+OpenSSL.SSL.SysCallError: (10053, 'WSAECONNABORTED')
+2023-11-12 13:09:33,210 - ERROR - TLS handshake error: (10053, 'WSAECONNABORTED')
+Traceback (most recent call last):
+  File "C:\Users\Marios Stefanidis\Documents\GitHub\Diploma-Thesis\code\slarchive-server\encryption\ssl_con.py", line 147, in run
+    self.establish_ssl_connection()
+  File "C:\Users\Marios Stefanidis\Documents\GitHub\Diploma-Thesis\code\slarchive-server\encryption\ssl_con.py", line 38, in establish_ssl_connection
+    self.ssl_socket.do_handshake()
+  File "C:\Users\Marios Stefanidis\AppData\Local\Programs\Python\Python311\Lib\site-packages\OpenSSL\SSL.py", line 2202, in do_handshake
+    self._raise_ssl_error(self._ssl, result)
+  File "C:\Users\Marios Stefanidis\AppData\Local\Programs\Python\Python311\Lib\site-packages\OpenSSL\SSL.py", line 1827, in _raise_ssl_error
+    raise SysCallError(errno, errorcode.get(errno))
+OpenSSL.SSL.SysCallError: (10053, 'WSAECONNABORTED')
+2023-11-12 13:10:19,493 - ERROR - TLS handshake error: (10053, 'WSAECONNABORTED')
+Traceback (most recent call last):
+  File "C:\Users\Marios Stefanidis\Documents\GitHub\Diploma-Thesis\code\slarchive-server\encryption\ssl_con.py", line 147, in run
+    self.establish_ssl_connection()
+  File "C:\Users\Marios Stefanidis\Documents\GitHub\Diploma-Thesis\code\slarchive-server\encryption\ssl_con.py", line 38, in establish_ssl_connection
+    self.ssl_socket.do_handshake()
+  File "C:\Users\Marios Stefanidis\AppData\Local\Programs\Python\Python311\Lib\site-packages\OpenSSL\SSL.py", line 2202, in do_handshake
+    self._raise_ssl_error(self._ssl, result)
+  File "C:\Users\Marios Stefanidis\AppData\Local\Programs\Python\Python311\Lib\site-packages\OpenSSL\SSL.py", line 1827, in _raise_ssl_error
+    raise SysCallError(errno, errorcode.get(errno))
+OpenSSL.SSL.SysCallError: (10053, 'WSAECONNABORTED')
+2023-11-12 13:10:20,076 - ERROR - TLS handshake error: (10053, 'WSAECONNABORTED')
+Traceback (most recent call last):
+  File "C:\Users\Marios Stefanidis\Documents\GitHub\Diploma-Thesis\code\slarchive-server\encryption\ssl_con.py", line 147, in run
+    self.establish_ssl_connection()
+  File "C:\Users\Marios Stefanidis\Documents\GitHub\Diploma-Thesis\code\slarchive-server\encryption\ssl_con.py", line 38, in establish_ssl_connection
+    self.ssl_socket.do_handshake()
+  File "C:\Users\Marios Stefanidis\AppData\Local\Programs\Python\Python311\Lib\site-packages\OpenSSL\SSL.py", line 2202, in do_handshake
+    self._raise_ssl_error(self._ssl, result)
+  File "C:\Users\Marios Stefanidis\AppData\Local\Programs\Python\Python311\Lib\site-packages\OpenSSL\SSL.py", line 1827, in _raise_ssl_error
+    raise SysCallError(errno, errorcode.get(errno))
+OpenSSL.SSL.SysCallError: (10053, 'WSAECONNABORTED')
+2023-11-12 13:10:54,481 - ERROR - TLS handshake error: (10053, 'WSAECONNABORTED')
+Traceback (most recent call last):
+  File "C:\Users\Marios Stefanidis\Documents\GitHub\Diploma-Thesis\code\slarchive-server\encryption\ssl_con.py", line 147, in run
+    self.establish_ssl_connection()
+  File "C:\Users\Marios Stefanidis\Documents\GitHub\Diploma-Thesis\code\slarchive-server\encryption\ssl_con.py", line 38, in establish_ssl_connection
+    self.ssl_socket.do_handshake()
+  File "C:\Users\Marios Stefanidis\AppData\Local\Programs\Python\Python311\Lib\site-packages\OpenSSL\SSL.py", line 2202, in do_handshake
+    self._raise_ssl_error(self._ssl, result)
+  File "C:\Users\Marios Stefanidis\AppData\Local\Programs\Python\Python311\Lib\site-packages\OpenSSL\SSL.py", line 1827, in _raise_ssl_error
+    raise SysCallError(errno, errorcode.get(errno))
+OpenSSL.SSL.SysCallError: (10053, 'WSAECONNABORTED')
+2023-11-12 13:10:55,064 - ERROR - TLS handshake error: (10053, 'WSAECONNABORTED')
+Traceback (most recent call last):
+  File "C:\Users\Marios Stefanidis\Documents\GitHub\Diploma-Thesis\code\slarchive-server\encryption\ssl_con.py", line 147, in run
+    self.establish_ssl_connection()
+  File "C:\Users\Marios Stefanidis\Documents\GitHub\Diploma-Thesis\code\slarchive-server\encryption\ssl_con.py", line 38, in establish_ssl_connection
+    self.ssl_socket.do_handshake()
+  File "C:\Users\Marios Stefanidis\AppData\Local\Programs\Python\Python311\Lib\site-packages\OpenSSL\SSL.py", line 2202, in do_handshake
+    self._raise_ssl_error(self._ssl, result)
+  File "C:\Users\Marios Stefanidis\AppData\Local\Programs\Python\Python311\Lib\site-packages\OpenSSL\SSL.py", line 1827, in _raise_ssl_error
+    raise SysCallError(errno, errorcode.get(errno))
+OpenSSL.SSL.SysCallError: (10053, 'WSAECONNABORTED')
+2023-11-12 13:13:04,536 - INFO - Handshake was successful!
+2023-11-12 13:13:04,548 - INFO - Master Key and IV were successfully sent.
+2023-11-12 13:13:04,742 - INFO - Encryption process completed for source file: .\..\archive\2023\ZW\ITSC\EHE.D\ZW.ITSC.00.EHN.D.2023.295.
+2023-11-12 13:13:04,742 - INFO - Total Size of Data and Chunk Size were successfully sent.
+2023-11-12 13:13:04,742 - INFO - Encrypted data were sent successfully.
+2023-11-12 13:13:04,742 - INFO - Filename encrypted and sent successfully.
+2023-11-12 13:13:04,979 - ERROR - TLS handshake error: 
+Traceback (most recent call last):
+  File "C:\Users\Marios Stefanidis\Documents\GitHub\Diploma-Thesis\code\slarchive-server\encryption\ssl_con.py", line 153, in run
+    rejection_message = self.ssl_socket.recv(4096)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Marios Stefanidis\AppData\Local\Programs\Python\Python311\Lib\site-packages\OpenSSL\SSL.py", line 2076, in recv
+    self._raise_ssl_error(self._ssl, result)
+  File "C:\Users\Marios Stefanidis\AppData\Local\Programs\Python\Python311\Lib\site-packages\OpenSSL\SSL.py", line 1814, in _raise_ssl_error
+    raise ZeroReturnError()
+OpenSSL.SSL.ZeroReturnError
+2023-11-12 13:13:04,982 - INFO - SLL Connection closed!
+2023-11-12 13:13:05,598 - INFO - Handshake was successful!
+2023-11-12 13:13:05,612 - INFO - Master Key and IV were successfully sent.
+2023-11-12 13:13:05,831 - INFO - Encryption process completed for source file: .\..\archive\2023\ZW\ITSC\EHE.D\ZW.ITSC.00.EHN.D.2023.295.
+2023-11-12 13:13:05,837 - INFO - Total Size of Data and Chunk Size were successfully sent.
+2023-11-12 13:13:05,837 - INFO - Encrypted data were sent successfully.
+2023-11-12 13:13:05,838 - INFO - Filename encrypted and sent successfully.
+2023-11-12 13:13:06,007 - ERROR - TLS handshake error: 
+Traceback (most recent call last):
+  File "C:\Users\Marios Stefanidis\Documents\GitHub\Diploma-Thesis\code\slarchive-server\encryption\ssl_con.py", line 153, in run
+    rejection_message = self.ssl_socket.recv(4096)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Marios Stefanidis\AppData\Local\Programs\Python\Python311\Lib\site-packages\OpenSSL\SSL.py", line 2076, in recv
+    self._raise_ssl_error(self._ssl, result)
+  File "C:\Users\Marios Stefanidis\AppData\Local\Programs\Python\Python311\Lib\site-packages\OpenSSL\SSL.py", line 1814, in _raise_ssl_error
+    raise ZeroReturnError()
+OpenSSL.SSL.ZeroReturnError
+2023-11-12 13:13:06,007 - INFO - SLL Connection closed!
+2023-11-12 13:21:55,647 - ERROR - TLS handshake error: (10053, 'WSAECONNABORTED')
+Traceback (most recent call last):
+  File "C:\Users\Marios Stefanidis\Documents\GitHub\Diploma-Thesis\code\slarchive-server\encryption\ssl_con.py", line 147, in run
+    self.establish_ssl_connection()
+  File "C:\Users\Marios Stefanidis\Documents\GitHub\Diploma-Thesis\code\slarchive-server\encryption\ssl_con.py", line 38, in establish_ssl_connection
+    self.ssl_socket.do_handshake()
+  File "C:\Users\Marios Stefanidis\AppData\Local\Programs\Python\Python311\Lib\site-packages\OpenSSL\SSL.py", line 2202, in do_handshake
+    self._raise_ssl_error(self._ssl, result)
+  File "C:\Users\Marios Stefanidis\AppData\Local\Programs\Python\Python311\Lib\site-packages\OpenSSL\SSL.py", line 1827, in _raise_ssl_error
+    raise SysCallError(errno, errorcode.get(errno))
+OpenSSL.SSL.SysCallError: (10053, 'WSAECONNABORTED')
+2023-11-12 13:21:56,217 - ERROR - TLS handshake error: (10053, 'WSAECONNABORTED')
+Traceback (most recent call last):
+  File "C:\Users\Marios Stefanidis\Documents\GitHub\Diploma-Thesis\code\slarchive-server\encryption\ssl_con.py", line 147, in run
+    self.establish_ssl_connection()
+  File "C:\Users\Marios Stefanidis\Documents\GitHub\Diploma-Thesis\code\slarchive-server\encryption\ssl_con.py", line 38, in establish_ssl_connection
+    self.ssl_socket.do_handshake()
+  File "C:\Users\Marios Stefanidis\AppData\Local\Programs\Python\Python311\Lib\site-packages\OpenSSL\SSL.py", line 2202, in do_handshake
+    self._raise_ssl_error(self._ssl, result)
+  File "C:\Users\Marios Stefanidis\AppData\Local\Programs\Python\Python311\Lib\site-packages\OpenSSL\SSL.py", line 1827, in _raise_ssl_error
+    raise SysCallError(errno, errorcode.get(errno))
+OpenSSL.SSL.SysCallError: (10053, 'WSAECONNABORTED')
+2023-11-12 13:23:32,008 - ERROR - TLS handshake error: (10053, 'WSAECONNABORTED')
+Traceback (most recent call last):
+  File "C:\Users\Marios Stefanidis\Documents\GitHub\Diploma-Thesis\code\slarchive-server\encryption\ssl_con.py", line 147, in run
+    self.establish_ssl_connection()
+  File "C:\Users\Marios Stefanidis\Documents\GitHub\Diploma-Thesis\code\slarchive-server\encryption\ssl_con.py", line 38, in establish_ssl_connection
+    self.ssl_socket.do_handshake()
+  File "C:\Users\Marios Stefanidis\AppData\Local\Programs\Python\Python311\Lib\site-packages\OpenSSL\SSL.py", line 2202, in do_handshake
+    self._raise_ssl_error(self._ssl, result)
+  File "C:\Users\Marios Stefanidis\AppData\Local\Programs\Python\Python311\Lib\site-packages\OpenSSL\SSL.py", line 1827, in _raise_ssl_error
+    raise SysCallError(errno, errorcode.get(errno))
+OpenSSL.SSL.SysCallError: (10053, 'WSAECONNABORTED')
+2023-11-12 13:23:32,581 - ERROR - TLS handshake error: (10053, 'WSAECONNABORTED')
+Traceback (most recent call last):
+  File "C:\Users\Marios Stefanidis\Documents\GitHub\Diploma-Thesis\code\slarchive-server\encryption\ssl_con.py", line 147, in run
+    self.establish_ssl_connection()
+  File "C:\Users\Marios Stefanidis\Documents\GitHub\Diploma-Thesis\code\slarchive-server\encryption\ssl_con.py", line 38, in establish_ssl_connection
+    self.ssl_socket.do_handshake()
+  File "C:\Users\Marios Stefanidis\AppData\Local\Programs\Python\Python311\Lib\site-packages\OpenSSL\SSL.py", line 2202, in do_handshake
+    self._raise_ssl_error(self._ssl, result)
+  File "C:\Users\Marios Stefanidis\AppData\Local\Programs\Python\Python311\Lib\site-packages\OpenSSL\SSL.py", line 1827, in _raise_ssl_error
+    raise SysCallError(errno, errorcode.get(errno))
+OpenSSL.SSL.SysCallError: (10053, 'WSAECONNABORTED')
+2023-11-12 13:24:35,491 - ERROR - TLS handshake error: (10053, 'WSAECONNABORTED')
+Traceback (most recent call last):
+  File "C:\Users\Marios Stefanidis\Documents\GitHub\Diploma-Thesis\code\slarchive-server\encryption\ssl_con.py", line 147, in run
+    self.establish_ssl_connection()
+  File "C:\Users\Marios Stefanidis\Documents\GitHub\Diploma-Thesis\code\slarchive-server\encryption\ssl_con.py", line 38, in establish_ssl_connection
+    self.ssl_socket.do_handshake()
+  File "C:\Users\Marios Stefanidis\AppData\Local\Programs\Python\Python311\Lib\site-packages\OpenSSL\SSL.py", line 2202, in do_handshake
+    self._raise_ssl_error(self._ssl, result)
+  File "C:\Users\Marios Stefanidis\AppData\Local\Programs\Python\Python311\Lib\site-packages\OpenSSL\SSL.py", line 1827, in _raise_ssl_error
+    raise SysCallError(errno, errorcode.get(errno))
+OpenSSL.SSL.SysCallError: (10053, 'WSAECONNABORTED')
+2023-11-12 13:24:35,492 - ERROR - Error during SSL socket shutdown: [('SSL routines', '', 'shutdown while in init')]
+Traceback (most recent call last):
+  File "C:\Users\Marios Stefanidis\Documents\GitHub\Diploma-Thesis\code\slarchive-server\encryption\ssl_con.py", line 169, in close
+    self.ssl_socket.shutdown()
+  File "C:\Users\Marios Stefanidis\AppData\Local\Programs\Python\Python311\Lib\site-packages\OpenSSL\SSL.py", line 2345, in shutdown
+    self._raise_ssl_error(self._ssl, result)
+  File "C:\Users\Marios Stefanidis\AppData\Local\Programs\Python\Python311\Lib\site-packages\OpenSSL\SSL.py", line 1843, in _raise_ssl_error
+    _openssl_assert(
+  File "C:\Users\Marios Stefanidis\AppData\Local\Programs\Python\Python311\Lib\site-packages\OpenSSL\_util.py", line 71, in openssl_assert
+    exception_from_error_queue(error)
+  File "C:\Users\Marios Stefanidis\AppData\Local\Programs\Python\Python311\Lib\site-packages\OpenSSL\_util.py", line 57, in exception_from_error_queue
+    raise exception_type(errors)
+OpenSSL.SSL.Error: [('SSL routines', '', 'shutdown while in init')]
+2023-11-12 13:24:36,057 - ERROR - TLS handshake error: (10053, 'WSAECONNABORTED')
+Traceback (most recent call last):
+  File "C:\Users\Marios Stefanidis\Documents\GitHub\Diploma-Thesis\code\slarchive-server\encryption\ssl_con.py", line 147, in run
+    self.establish_ssl_connection()
+  File "C:\Users\Marios Stefanidis\Documents\GitHub\Diploma-Thesis\code\slarchive-server\encryption\ssl_con.py", line 38, in establish_ssl_connection
+    self.ssl_socket.do_handshake()
+  File "C:\Users\Marios Stefanidis\AppData\Local\Programs\Python\Python311\Lib\site-packages\OpenSSL\SSL.py", line 2202, in do_handshake
+    self._raise_ssl_error(self._ssl, result)
+  File "C:\Users\Marios Stefanidis\AppData\Local\Programs\Python\Python311\Lib\site-packages\OpenSSL\SSL.py", line 1827, in _raise_ssl_error
+    raise SysCallError(errno, errorcode.get(errno))
+OpenSSL.SSL.SysCallError: (10053, 'WSAECONNABORTED')
+2023-11-12 13:24:36,057 - ERROR - Error during SSL socket shutdown: [('SSL routines', '', 'shutdown while in init')]
+Traceback (most recent call last):
+  File "C:\Users\Marios Stefanidis\Documents\GitHub\Diploma-Thesis\code\slarchive-server\encryption\ssl_con.py", line 169, in close
+    self.ssl_socket.shutdown()
+  File "C:\Users\Marios Stefanidis\AppData\Local\Programs\Python\Python311\Lib\site-packages\OpenSSL\SSL.py", line 2345, in shutdown
+    self._raise_ssl_error(self._ssl, result)
+  File "C:\Users\Marios Stefanidis\AppData\Local\Programs\Python\Python311\Lib\site-packages\OpenSSL\SSL.py", line 1843, in _raise_ssl_error
+    _openssl_assert(
+  File "C:\Users\Marios Stefanidis\AppData\Local\Programs\Python\Python311\Lib\site-packages\OpenSSL\_util.py", line 71, in openssl_assert
+    exception_from_error_queue(error)
+  File "C:\Users\Marios Stefanidis\AppData\Local\Programs\Python\Python311\Lib\site-packages\OpenSSL\_util.py", line 57, in exception_from_error_queue
+    raise exception_type(errors)
+OpenSSL.SSL.Error: [('SSL routines', '', 'shutdown while in init')]
+2023-11-12 13:26:15,783 - ERROR - TLS handshake error: (10053, 'WSAECONNABORTED')
+Traceback (most recent call last):
+  File "C:\Users\Marios Stefanidis\Documents\GitHub\Diploma-Thesis\code\slarchive-server\encryption\ssl_con.py", line 147, in run
+    self.establish_ssl_connection()
+  File "C:\Users\Marios Stefanidis\Documents\GitHub\Diploma-Thesis\code\slarchive-server\encryption\ssl_con.py", line 38, in establish_ssl_connection
+    self.ssl_socket.do_handshake()
+  File "C:\Users\Marios Stefanidis\AppData\Local\Programs\Python\Python311\Lib\site-packages\OpenSSL\SSL.py", line 2202, in do_handshake
+    self._raise_ssl_error(self._ssl, result)
+  File "C:\Users\Marios Stefanidis\AppData\Local\Programs\Python\Python311\Lib\site-packages\OpenSSL\SSL.py", line 1827, in _raise_ssl_error
+    raise SysCallError(errno, errorcode.get(errno))
+OpenSSL.SSL.SysCallError: (10053, 'WSAECONNABORTED')
+2023-11-12 13:26:16,344 - ERROR - TLS handshake error: (10053, 'WSAECONNABORTED')
+Traceback (most recent call last):
+  File "C:\Users\Marios Stefanidis\Documents\GitHub\Diploma-Thesis\code\slarchive-server\encryption\ssl_con.py", line 147, in run
+    self.establish_ssl_connection()
+  File "C:\Users\Marios Stefanidis\Documents\GitHub\Diploma-Thesis\code\slarchive-server\encryption\ssl_con.py", line 38, in establish_ssl_connection
+    self.ssl_socket.do_handshake()
+  File "C:\Users\Marios Stefanidis\AppData\Local\Programs\Python\Python311\Lib\site-packages\OpenSSL\SSL.py", line 2202, in do_handshake
+    self._raise_ssl_error(self._ssl, result)
+  File "C:\Users\Marios Stefanidis\AppData\Local\Programs\Python\Python311\Lib\site-packages\OpenSSL\SSL.py", line 1827, in _raise_ssl_error
+    raise SysCallError(errno, errorcode.get(errno))
+OpenSSL.SSL.SysCallError: (10053, 'WSAECONNABORTED')
+2023-11-12 13:27:44,068 - ERROR - TLS handshake error: (10053, 'WSAECONNABORTED')
+Traceback (most recent call last):
+  File "C:\Users\Marios Stefanidis\Documents\GitHub\Diploma-Thesis\code\slarchive-server\encryption\ssl_con.py", line 147, in run
+    self.establish_ssl_connection()
+  File "C:\Users\Marios Stefanidis\Documents\GitHub\Diploma-Thesis\code\slarchive-server\encryption\ssl_con.py", line 38, in establish_ssl_connection
+    self.ssl_socket.do_handshake()
+  File "C:\Users\Marios Stefanidis\AppData\Local\Programs\Python\Python311\Lib\site-packages\OpenSSL\SSL.py", line 2202, in do_handshake
+    self._raise_ssl_error(self._ssl, result)
+  File "C:\Users\Marios Stefanidis\AppData\Local\Programs\Python\Python311\Lib\site-packages\OpenSSL\SSL.py", line 1827, in _raise_ssl_error
+    raise SysCallError(errno, errorcode.get(errno))
+OpenSSL.SSL.SysCallError: (10053, 'WSAECONNABORTED')
+2023-11-12 13:27:44,068 - INFO - SSL Connection closed!
+2023-11-12 13:27:44,621 - ERROR - TLS handshake error: (10053, 'WSAECONNABORTED')
+Traceback (most recent call last):
+  File "C:\Users\Marios Stefanidis\Documents\GitHub\Diploma-Thesis\code\slarchive-server\encryption\ssl_con.py", line 147, in run
+    self.establish_ssl_connection()
+  File "C:\Users\Marios Stefanidis\Documents\GitHub\Diploma-Thesis\code\slarchive-server\encryption\ssl_con.py", line 38, in establish_ssl_connection
+    self.ssl_socket.do_handshake()
+  File "C:\Users\Marios Stefanidis\AppData\Local\Programs\Python\Python311\Lib\site-packages\OpenSSL\SSL.py", line 2202, in do_handshake
+    self._raise_ssl_error(self._ssl, result)
+  File "C:\Users\Marios Stefanidis\AppData\Local\Programs\Python\Python311\Lib\site-packages\OpenSSL\SSL.py", line 1827, in _raise_ssl_error
+    raise SysCallError(errno, errorcode.get(errno))
+OpenSSL.SSL.SysCallError: (10053, 'WSAECONNABORTED')
+2023-11-12 13:27:44,621 - INFO - SSL Connection closed!
