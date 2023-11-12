@@ -11,12 +11,17 @@ from datetime import datetime
 from processor import TraceProcessor
 
 class SSLServer:
-  def __init__(self, host, port, allowed_ips_file):
+  def __init__(self, host, port, allowed_ips_file, max_requests=10, time_window_seconds=60):
     self.host = host
     self.port = port
     self.server_socket = None
     self.context = None
     self.allowed_ips = self.load_allowed_ips(allowed_ips_file)
+    # Dictionary to store request counts for each IP
+    self.request_counts = {}
+    self.max_requests = max_requests
+    self.time_window_seconds = time_window_seconds
+    
     
   def load_allowed_ips(self, allowed_ips_file):
     try:
@@ -47,15 +52,53 @@ class SSLServer:
     print('Server is listening on port {}...'.format(self.port))
     while True:
       client_socket, client_address = self.server_socket.accept()
-      if client_address[0] not in self.allowed_ips:
+      if not self.is_client_allowed(client_address):
         logging.warning(f'Rejected connection from {client_address}')
         rejection_message = 'Connection rejected. Your IP is not allowed.'
         client_socket.send(rejection_message.encode())
         client_socket.close()
         continue
+      
+      if not self.is_request_allowed(client_address):
+        logging.warning(f'Rejected connection from {client_address} due to excessive requests.')
+        rejection_message = 'Connection rejected. Too many requests in a short period.'
+        client_socket.send(rejection_message.encode())
+        client_socket.close()
+        
+        # Remove the IP from allowed_ips
+        ip = client_address[0]
+        if ip in self.allowed_ips:
+          self.allowed_ips.remove(ip)
+        continue
         
       logging.info(f'Accepted connection from {client_address}')
       self.handle_client(client_socket)
+      
+  def is_client_allowed(self, client_address):
+    return client_address[0] in self.allowed_ips
+  
+  def is_request_allowed(self, client_address):
+    ip = client_address[0]
+    current_time = datetime.now()
+    
+    # Initialize request count for the IP if not present
+    if ip not in self.request_counts:
+      self.request_counts[ip] = []
+      
+    # Remove requests older than the time window
+    self.request_counts[ip] = [t for t in self.request_counts[ip] if (current_time - t).total_seconds() <= self.time_window_seconds]
+    
+    # Add the current request time
+    self.request_counts[ip].append(current_time)
+    
+    # Check if the request count exceeds the threshold
+    is_allowed = len(self.request_counts[ip]) <= self.max_requests
+    
+    # If not allowed, remove the IP from allowed_ips
+    if not is_allowed and ip in self.allowed_ips:
+      self.allowed_ips.remove(ip)
+      
+    return is_allowed
       
   def decrypt_master_iv(self, encrypted_master_key, encrypted_iv, cipher):
     master_key_bytes = cipher.decrypt(encrypted_master_key)
