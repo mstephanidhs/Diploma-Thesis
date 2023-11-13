@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Run this command to change file permissions
+# icacls run_commands.sh /grant:r Users:RX
+
 # Define the log file path
 LOG_FILE="./logs/output.log"
 
