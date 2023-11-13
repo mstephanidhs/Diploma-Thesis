@@ -32,10 +32,16 @@ class OnMyWatch:
 class Handler(FileSystemEventHandler):
   
   @staticmethod
-  def on_modified(event):
+  def is_empty(file_path):
+    return os.path.getsize(file_path) == 0
+  
+  def on_modified(self, event):
     
     # Location of the script to be executed
     encryptionScript = ".\\ssl_con.py"
+    
+    if self.is_empty(event.src_path):
+      return
     
     if not event.is_directory:
       

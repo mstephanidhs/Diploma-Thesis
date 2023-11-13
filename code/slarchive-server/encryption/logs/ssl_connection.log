@@ -410,3 +410,71 @@ Traceback (most recent call last):
     raise ZeroReturnError()
 OpenSSL.SSL.ZeroReturnError
 2023-11-12 18:48:32,342 - INFO - SSL Connection closed!
+2023-11-13 21:57:40,765 - INFO - Handshake was successful!
+2023-11-13 21:57:40,828 - INFO - Master Key and IV were successfully sent.
+2023-11-13 21:57:41,237 - INFO - Encryption process completed for source file: .\..\archive\2023\ZW\ITSC\EHE.D\ZW.ITSC.00.EHE.D.2023.316.
+2023-11-13 21:57:41,237 - INFO - Total Size of Data and Chunk Size were successfully sent.
+2023-11-13 21:57:41,237 - INFO - Encrypted data were sent successfully.
+2023-11-13 21:57:41,237 - INFO - Filename encrypted and sent successfully.
+2023-11-13 21:57:41,474 - ERROR - TLS handshake error: 
+Traceback (most recent call last):
+  File "C:\Users\Marios Stefanidis\Documents\GitHub\Diploma-Thesis\code\slarchive-server\encryption\ssl_con.py", line 153, in run
+    rejection_message = self.ssl_socket.recv(4096)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Marios Stefanidis\AppData\Local\Programs\Python\Python311\Lib\site-packages\OpenSSL\SSL.py", line 2076, in recv
+    self._raise_ssl_error(self._ssl, result)
+  File "C:\Users\Marios Stefanidis\AppData\Local\Programs\Python\Python311\Lib\site-packages\OpenSSL\SSL.py", line 1814, in _raise_ssl_error
+    raise ZeroReturnError()
+OpenSSL.SSL.ZeroReturnError
+2023-11-13 21:57:41,490 - INFO - SSL Connection closed!
+2023-11-13 21:57:42,065 - INFO - Handshake was successful!
+2023-11-13 21:57:42,065 - INFO - Master Key and IV were successfully sent.
+2023-11-13 21:57:42,238 - INFO - Encryption process completed for source file: .\..\archive\2023\ZW\ITSC\EHE.D\ZW.ITSC.00.EHE.D.2023.316.
+2023-11-13 21:57:42,238 - INFO - Total Size of Data and Chunk Size were successfully sent.
+2023-11-13 21:57:42,254 - INFO - Encrypted data were sent successfully.
+2023-11-13 21:57:42,254 - INFO - Filename encrypted and sent successfully.
+2023-11-13 21:57:42,387 - ERROR - TLS handshake error: 
+Traceback (most recent call last):
+  File "C:\Users\Marios Stefanidis\Documents\GitHub\Diploma-Thesis\code\slarchive-server\encryption\ssl_con.py", line 153, in run
+    rejection_message = self.ssl_socket.recv(4096)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Marios Stefanidis\AppData\Local\Programs\Python\Python311\Lib\site-packages\OpenSSL\SSL.py", line 2076, in recv
+    self._raise_ssl_error(self._ssl, result)
+  File "C:\Users\Marios Stefanidis\AppData\Local\Programs\Python\Python311\Lib\site-packages\OpenSSL\SSL.py", line 1814, in _raise_ssl_error
+    raise ZeroReturnError()
+OpenSSL.SSL.ZeroReturnError
+2023-11-13 21:57:42,387 - INFO - SSL Connection closed!
+2023-11-13 21:57:42,936 - INFO - Handshake was successful!
+2023-11-13 21:57:42,936 - INFO - Master Key and IV were successfully sent.
+2023-11-13 21:57:43,124 - INFO - Encryption process completed for source file: .\..\archive\2023\ZW\ITSC\EHN.D\ZW.ITSC.00.EHN.D.2023.316.
+2023-11-13 21:57:43,124 - INFO - Total Size of Data and Chunk Size were successfully sent.
+2023-11-13 21:57:43,124 - INFO - Encrypted data were sent successfully.
+2023-11-13 21:57:43,124 - INFO - Filename encrypted and sent successfully.
+2023-11-13 21:57:43,249 - ERROR - TLS handshake error: 
+Traceback (most recent call last):
+  File "C:\Users\Marios Stefanidis\Documents\GitHub\Diploma-Thesis\code\slarchive-server\encryption\ssl_con.py", line 153, in run
+    rejection_message = self.ssl_socket.recv(4096)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Marios Stefanidis\AppData\Local\Programs\Python\Python311\Lib\site-packages\OpenSSL\SSL.py", line 2076, in recv
+    self._raise_ssl_error(self._ssl, result)
+  File "C:\Users\Marios Stefanidis\AppData\Local\Programs\Python\Python311\Lib\site-packages\OpenSSL\SSL.py", line 1814, in _raise_ssl_error
+    raise ZeroReturnError()
+OpenSSL.SSL.ZeroReturnError
+2023-11-13 21:57:43,249 - INFO - SSL Connection closed!
+2023-11-13 21:57:43,831 - INFO - Handshake was successful!
+2023-11-13 21:57:43,846 - INFO - Master Key and IV were successfully sent.
+2023-11-13 21:57:44,026 - INFO - Encryption process completed for source file: .\..\archive\2023\ZW\ITSC\EHZ.D\ZW.ITSC.00.EHZ.D.2023.316.
+2023-11-13 21:57:44,026 - INFO - Total Size of Data and Chunk Size were successfully sent.
+2023-11-13 21:57:44,026 - INFO - Encrypted data were sent successfully.
+2023-11-13 21:57:44,026 - INFO - Filename encrypted and sent successfully.
+2023-11-13 21:57:44,171 - ERROR - TLS handshake error: 
+Traceback (most recent call last):
+  File "C:\Users\Marios Stefanidis\Documents\GitHub\Diploma-Thesis\code\slarchive-server\encryption\ssl_con.py", line 153, in run
+    rejection_message = self.ssl_socket.recv(4096)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Marios Stefanidis\AppData\Local\Programs\Python\Python311\Lib\site-packages\OpenSSL\SSL.py", line 2076, in recv
+    self._raise_ssl_error(self._ssl, result)
+  File "C:\Users\Marios Stefanidis\AppData\Local\Programs\Python\Python311\Lib\site-packages\OpenSSL\SSL.py", line 1814, in _raise_ssl_error
+    raise ZeroReturnError()
+OpenSSL.SSL.ZeroReturnError
+2023-11-13 21:57:44,171 - INFO - SSL Connection closed!

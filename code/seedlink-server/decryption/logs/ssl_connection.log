@@ -55,3 +55,23 @@
 2023-11-12 18:48:31,865 - INFO - Received successfully Master Key and IV.
 2023-11-12 18:48:31,997 - INFO - Received the encrypted data
 2023-11-12 18:48:32,342 - INFO - Trace was stored successfully
+2023-11-13 21:57:40,765 - INFO - Accepted connection from ('127.0.0.1', 54232)
+2023-11-13 21:57:40,765 - INFO - Handshake was successful!
+2023-11-13 21:57:40,947 - INFO - Received successfully Master Key and IV.
+2023-11-13 21:57:41,255 - INFO - Received the encrypted data
+2023-11-13 21:57:41,474 - INFO - Trace was stored successfully
+2023-11-13 21:57:42,065 - INFO - Accepted connection from ('127.0.0.1', 54240)
+2023-11-13 21:57:42,065 - INFO - Handshake was successful!
+2023-11-13 21:57:42,110 - INFO - Received successfully Master Key and IV.
+2023-11-13 21:57:42,254 - INFO - Received the encrypted data
+2023-11-13 21:57:42,376 - INFO - Trace was stored successfully
+2023-11-13 21:57:42,936 - INFO - Accepted connection from ('127.0.0.1', 54245)
+2023-11-13 21:57:42,936 - INFO - Handshake was successful!
+2023-11-13 21:57:42,983 - INFO - Received successfully Master Key and IV.
+2023-11-13 21:57:43,124 - INFO - Received the encrypted data
+2023-11-13 21:57:43,249 - INFO - Trace was stored successfully
+2023-11-13 21:57:43,831 - INFO - Accepted connection from ('127.0.0.1', 54258)
+2023-11-13 21:57:43,831 - INFO - Handshake was successful!
+2023-11-13 21:57:43,884 - INFO - Received successfully Master Key and IV.
+2023-11-13 21:57:44,042 - INFO - Received the encrypted data
+2023-11-13 21:57:44,169 - INFO - Trace was stored successfully

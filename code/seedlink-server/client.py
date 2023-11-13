@@ -61,7 +61,7 @@ class MyClient(EasySeedLinkClient):
 
 if __name__ == '__main__':
 
-    seedlink_server = 'rtserve.iris.washington.edu'
+    seedlink_server = 'localhost'
     seedlink_port = '18000'
 
     # forge seedlink url in order to have address:port format
@@ -73,5 +73,10 @@ if __name__ == '__main__':
 
     # Connect to a Seedlink server
     client = MyClient(seedlink_url)
+    
+    # Retrieve INFO:STREAMS
+    streams_xml = client.get_info('STREAMS')
+    print(streams_xml)
+    
     client.add_stream(net, sta, cha)
     client.run()
