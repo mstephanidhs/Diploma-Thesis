@@ -3,7 +3,12 @@
 # Example stream list file for use with the -l argument of slclient or
 # with the sl_read_streamlist() libslink function.
 # specifying the data acquired from a specific seismic station
-ZW ITSC EHZ.D
+# ZW ITSC EHZ.D
+# HP UPR HHZ.D
+HP UPR HH*.D
+HP UPR HH?.D
+
+
 
 
 ----  End example file -----
