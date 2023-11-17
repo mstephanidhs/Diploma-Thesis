@@ -7,20 +7,44 @@ from OpenSSL import SSL
 from Crypto.PublicKey import RSA
 from Crypto.Cipher import PKCS1_OAEP
 from datetime import datetime
+from collections import defaultdict
+from threading import Lock
 
 from processor import TraceProcessor
 
 class SSLServer:
-  def __init__(self, host, port, allowed_ips_file, max_requests=10, time_window_seconds=60):
+  def __init__(self, host, port, allowed_ips_file, max_requests=10, time_window_seconds=60, token_bucket_capacity=20, token_fill_rate=2):
     self.host = host
     self.port = port
     self.server_socket = None
     self.context = None
+
     self.allowed_ips = self.load_allowed_ips(allowed_ips_file)
-    # Dictionary to store request counts for each IP
-    self.request_counts = {}
+
+    # Dictionary to store a list of request timestamps for each IP address
+    self.request_counts = defaultdict(list)
+
+    # Dictionary to store the token bucket information for each IP address
+    # Each entry includes the current number of tokens and the timestamp of the last refill
+    self.token_bucket = defaultdict(lambda: {'tokens': token_bucket_capacity, 'last_refill_time': datetime.now()})
+
+    # Maximum number of allowed requests per time window for each IP
     self.max_requests = max_requests
+
+    # Time window duration (in seconds) within which requests are counted
     self.time_window_seconds = time_window_seconds
+
+    # Maximum capacity of the token bucket for each IP
+    self.token_bucket_capacity = token_bucket_capacity
+
+    # Rate at which tokens are added to the token bucket (tokens per second)
+    self.token_fill_rate = token_fill_rate
+
+    # Time interval (in seconds) at which the token bucket is refilled
+    self.token_refill_interval = 1 # seconds
+
+    # Lock to ensure thread-safe token bucket refilling
+    self.token_refill_lock = Lock()
     
     
   def load_allowed_ips(self, allowed_ips_file):
@@ -97,8 +121,34 @@ class SSLServer:
     # If not allowed, remove the IP from allowed_ips
     if not is_allowed and ip in self.allowed_ips:
       self.allowed_ips.remove(ip)
-      
-    return is_allowed
+
+    # Token Bucket Algorithm - Ensures a controlled rate of requests for each IP address
+
+    # Acquire the lock to ensure thread safety during token bucket updates
+    with self.token_refill_lock:
+
+      # Calculate the time elapsed since the last token
+      time_since_last_refill = (current_time - self.token_bucket[ip]['last_refill_time']).total_seconds()
+
+      # Calculate the number of tokens to add based on the refill interval and fill rate
+      tokens_to_add = int(time_since_last_refill / self.token_refill_interval) * self.token_fill_rate
+
+      # Update the token bucket: add new tokens, but ensure it doesn't exceed the capacity
+      self.token_bucket[ip]['tokens'] = min(self.token_bucket_capacity, self.token_bucket[ip]['tokens'] + tokens_to_add)
+
+      # Update the timestamp of the last refill to the current time
+      self.token_bucket[ip]['last_refill_time'] = current_time
+
+      # Check if there are enough tokens to allow the current request
+      if self.token_bucket[ip]['tokens'] >= 1:
+        # Consume one token for the current request
+        self.token_bucket[ip]['tokens'] -= 1
+
+        # Allow the request since there are enough tokens
+        return is_allowed
+      else:
+        # Deny the request since there are not enough tokens
+        return False
       
   def decrypt_master_iv(self, encrypted_master_key, encrypted_iv, cipher):
     master_key_bytes = cipher.decrypt(encrypted_master_key)

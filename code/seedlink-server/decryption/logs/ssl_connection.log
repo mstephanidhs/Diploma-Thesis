@@ -75,3 +75,209 @@
 2023-11-13 21:57:43,884 - INFO - Received successfully Master Key and IV.
 2023-11-13 21:57:44,042 - INFO - Received the encrypted data
 2023-11-13 21:57:44,169 - INFO - Trace was stored successfully
+2023-11-14 22:52:47,504 - INFO - Accepted connection from ('127.0.0.1', 53333)
+2023-11-14 22:56:58,601 - INFO - Accepted connection from ('127.0.0.1', 53542)
+2023-11-14 22:59:17,417 - INFO - Accepted connection from ('127.0.0.1', 53712)
+2023-11-14 23:01:00,074 - INFO - Accepted connection from ('127.0.0.1', 53839)
+2023-11-14 23:01:00,074 - ERROR - TLS handshake error: 
+Traceback (most recent call last):
+  File "C:\Users\Marios Stefanidis\Documents\GitHub\Diploma-Thesis\code\seedlink-server\decryption\ssl_con.py", line 47, in acquire_connection
+    ssl_socket = self.connection_pool.get(block=False)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Marios Stefanidis\AppData\Local\Programs\Python\Python311\Lib\queue.py", line 168, in get
+    raise Empty
+_queue.Empty
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Marios Stefanidis\Documents\GitHub\Diploma-Thesis\code\seedlink-server\decryption\ssl_con.py", line 65, in create_ssl_connection
+    ssl_socket.do_handshake()
+  File "C:\Users\Marios Stefanidis\AppData\Local\Programs\Python\Python311\Lib\site-packages\OpenSSL\SSL.py", line 2202, in do_handshake
+    self._raise_ssl_error(self._ssl, result)
+  File "C:\Users\Marios Stefanidis\AppData\Local\Programs\Python\Python311\Lib\site-packages\OpenSSL\SSL.py", line 1810, in _raise_ssl_error
+    raise WantReadError()
+OpenSSL.SSL.WantReadError
+2023-11-14 23:03:35,059 - INFO - Accepted connection from ('127.0.0.1', 53945)
+2023-11-14 23:03:35,059 - ERROR - TLS handshake error: 
+Traceback (most recent call last):
+  File "C:\Users\Marios Stefanidis\Documents\GitHub\Diploma-Thesis\code\seedlink-server\decryption\ssl_con.py", line 47, in acquire_connection
+    ssl_socket = self.connection_pool.get(block=False)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Marios Stefanidis\AppData\Local\Programs\Python\Python311\Lib\queue.py", line 168, in get
+    raise Empty
+_queue.Empty
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Marios Stefanidis\Documents\GitHub\Diploma-Thesis\code\seedlink-server\decryption\ssl_con.py", line 65, in create_ssl_connection
+    ssl_socket.do_handshake()
+  File "C:\Users\Marios Stefanidis\AppData\Local\Programs\Python\Python311\Lib\site-packages\OpenSSL\SSL.py", line 2202, in do_handshake
+    self._raise_ssl_error(self._ssl, result)
+  File "C:\Users\Marios Stefanidis\AppData\Local\Programs\Python\Python311\Lib\site-packages\OpenSSL\SSL.py", line 1810, in _raise_ssl_error
+    raise WantReadError()
+OpenSSL.SSL.WantReadError
+2023-11-14 23:06:03,848 - INFO - Accepted connection from ('127.0.0.1', 54107)
+2023-11-14 23:11:42,444 - INFO - Accepted connection from ('127.0.0.1', 54279)
+2023-11-14 23:11:42,444 - ERROR - TLS handshake error: 
+Traceback (most recent call last):
+  File "C:\Users\Marios Stefanidis\Documents\GitHub\Diploma-Thesis\code\seedlink-server\decryption\ssl_con.py", line 47, in acquire_connection
+    ssl_socket = self.connection_pool.get(block=False)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Marios Stefanidis\AppData\Local\Programs\Python\Python311\Lib\queue.py", line 168, in get
+    raise Empty
+_queue.Empty
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Marios Stefanidis\Documents\GitHub\Diploma-Thesis\code\seedlink-server\decryption\ssl_con.py", line 65, in create_ssl_connection
+    ssl_socket.do_handshake()
+  File "C:\Users\Marios Stefanidis\AppData\Local\Programs\Python\Python311\Lib\site-packages\OpenSSL\SSL.py", line 2202, in do_handshake
+    self._raise_ssl_error(self._ssl, result)
+  File "C:\Users\Marios Stefanidis\AppData\Local\Programs\Python\Python311\Lib\site-packages\OpenSSL\SSL.py", line 1810, in _raise_ssl_error
+    raise WantReadError()
+OpenSSL.SSL.WantReadError
+2023-11-15 00:13:15,000 - INFO - Accepted connection from ('127.0.0.1', 52919)
+2023-11-15 00:13:15,000 - ERROR - An error occured: 'socket' object has no attribute 'set_socket'
+Traceback (most recent call last):
+  File "C:\Users\Marios Stefanidis\Documents\GitHub\Diploma-Thesis\code\seedlink-server\decryption\ssl_con.py", line 229, in handle_client
+    ssl_socket.set_socket(client_socket)
+    ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Marios Stefanidis\AppData\Local\Programs\Python\Python311\Lib\site-packages\OpenSSL\SSL.py", line 1798, in __getattr__
+    return getattr(self._socket, name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'socket' object has no attribute 'set_socket'
+2023-11-15 00:14:25,487 - INFO - Accepted connection from ('127.0.0.1', 52958)
+2023-11-15 00:14:25,487 - ERROR - An error occured: 'socket' object has no attribute 'set_socket'
+Traceback (most recent call last):
+  File "C:\Users\Marios Stefanidis\Documents\GitHub\Diploma-Thesis\code\seedlink-server\decryption\ssl_con.py", line 229, in handle_client
+    ssl_socket.set_socket(client_socket)
+    ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Marios Stefanidis\AppData\Local\Programs\Python\Python311\Lib\site-packages\OpenSSL\SSL.py", line 1798, in __getattr__
+    return getattr(self._socket, name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'socket' object has no attribute 'set_socket'
+2023-11-15 00:18:34,908 - INFO - Accepted connection from ('127.0.0.1', 53219)
+2023-11-15 00:18:34,908 - ERROR - TLS handshake error: (10057, 'WSAENOTCONN')
+Traceback (most recent call last):
+  File "C:\Users\Marios Stefanidis\Documents\GitHub\Diploma-Thesis\code\seedlink-server\decryption\ssl_con.py", line 230, in handle_client
+    ssl_socket.do_handshake()
+  File "C:\Users\Marios Stefanidis\AppData\Local\Programs\Python\Python311\Lib\site-packages\OpenSSL\SSL.py", line 2202, in do_handshake
+    self._raise_ssl_error(self._ssl, result)
+  File "C:\Users\Marios Stefanidis\AppData\Local\Programs\Python\Python311\Lib\site-packages\OpenSSL\SSL.py", line 1827, in _raise_ssl_error
+    raise SysCallError(errno, errorcode.get(errno))
+OpenSSL.SSL.SysCallError: (10057, 'WSAENOTCONN')
+2023-11-15 00:22:00,897 - INFO - Accepted connection from ('127.0.0.1', 53355)
+2023-11-15 00:22:00,898 - ERROR - An error occured: module 'socket' has no attribute 'SO_STATE'
+Traceback (most recent call last):
+  File "C:\Users\Marios Stefanidis\Documents\GitHub\Diploma-Thesis\code\seedlink-server\decryption\ssl_con.py", line 230, in handle_client
+    logging.info(f'Socket state before handshake: {ssl_socket.getsockopt(socket.SOL_SOCKET, socket.SO_STATE)}')
+                                                                                            ^^^^^^^^^^^^^^^
+AttributeError: module 'socket' has no attribute 'SO_STATE'
+2023-11-15 17:24:07,295 - INFO - Accepted connection from ('127.0.0.1', 53578)
+2023-11-15 17:24:07,312 - INFO - Handshake was successful!
+2023-11-15 17:24:07,420 - INFO - Received successfully Master Key and IV.
+2023-11-15 17:24:07,572 - INFO - Received the encrypted data
+2023-11-15 17:24:07,779 - INFO - Trace was stored successfully
+2023-11-15 17:24:08,475 - INFO - Accepted connection from ('127.0.0.1', 53587)
+2023-11-15 17:24:08,479 - INFO - Handshake was successful!
+2023-11-15 17:24:08,528 - INFO - Received successfully Master Key and IV.
+2023-11-15 17:24:08,695 - INFO - Received the encrypted data
+2023-11-15 17:24:08,815 - INFO - Trace was stored successfully
+2023-11-15 17:24:09,553 - INFO - Accepted connection from ('127.0.0.1', 53594)
+2023-11-15 17:24:09,558 - INFO - Handshake was successful!
+2023-11-15 17:24:09,613 - INFO - Received successfully Master Key and IV.
+2023-11-15 17:24:09,770 - INFO - Received the encrypted data
+2023-11-15 17:24:09,886 - INFO - Trace was stored successfully
+2023-11-15 17:24:10,603 - INFO - Accepted connection from ('127.0.0.1', 53603)
+2023-11-15 17:24:10,609 - INFO - Handshake was successful!
+2023-11-15 17:24:10,663 - INFO - Received successfully Master Key and IV.
+2023-11-15 17:24:10,846 - INFO - Received the encrypted data
+2023-11-15 17:24:10,981 - INFO - Trace was stored successfully
+2023-11-15 17:37:06,156 - INFO - Accepted connection from ('127.0.0.1', 53828)
+2023-11-15 17:37:06,162 - INFO - Handshake was successful!
+2023-11-15 17:37:06,237 - INFO - Received successfully Master Key and IV.
+2023-11-15 17:37:06,405 - INFO - Received the encrypted data
+2023-11-15 17:37:06,619 - INFO - Trace was stored successfully
+2023-11-15 17:37:07,237 - INFO - Accepted connection from ('127.0.0.1', 53835)
+2023-11-15 17:37:07,241 - INFO - Handshake was successful!
+2023-11-15 17:37:07,289 - INFO - Received successfully Master Key and IV.
+2023-11-15 17:37:07,596 - INFO - Received the encrypted data
+2023-11-15 17:37:07,723 - INFO - Trace was stored successfully
+2023-11-15 17:37:08,340 - INFO - Accepted connection from ('127.0.0.1', 53846)
+2023-11-15 17:37:08,345 - INFO - Handshake was successful!
+2023-11-15 17:37:08,393 - INFO - Received successfully Master Key and IV.
+2023-11-15 17:37:08,564 - INFO - Received the encrypted data
+2023-11-15 17:37:08,700 - INFO - Trace was stored successfully
+2023-11-15 18:05:31,429 - INFO - Accepted connection from ('127.0.0.1', 56009)
+2023-11-15 18:05:31,433 - INFO - Handshake was successful!
+2023-11-15 18:05:31,487 - INFO - Received successfully Master Key and IV.
+2023-11-15 18:05:31,659 - INFO - Received the encrypted data
+2023-11-15 18:05:31,777 - INFO - Trace was stored successfully
+2023-11-15 18:06:08,044 - INFO - Accepted connection from ('127.0.0.1', 56062)
+2023-11-15 18:06:08,048 - INFO - Handshake was successful!
+2023-11-15 18:06:08,100 - INFO - Received successfully Master Key and IV.
+2023-11-15 18:06:08,283 - INFO - Received the encrypted data
+2023-11-15 18:06:08,412 - INFO - Trace was stored successfully
+2023-11-15 18:06:30,007 - INFO - Accepted connection from ('127.0.0.1', 56092)
+2023-11-15 18:06:30,014 - INFO - Handshake was successful!
+2023-11-15 18:06:30,123 - INFO - Received successfully Master Key and IV.
+2023-11-15 18:06:30,573 - INFO - Received the encrypted data
+2023-11-15 18:06:30,825 - INFO - Trace was stored successfully
+2023-11-15 18:08:50,394 - INFO - Accepted connection from ('127.0.0.1', 56246)
+2023-11-15 18:08:50,398 - INFO - Handshake was successful!
+2023-11-15 18:08:50,449 - INFO - Received successfully Master Key and IV.
+2023-11-15 18:08:50,622 - INFO - Received the encrypted data
+2023-11-15 18:08:50,747 - INFO - Trace was stored successfully
+2023-11-15 18:09:32,527 - INFO - Accepted connection from ('127.0.0.1', 56282)
+2023-11-15 18:09:32,536 - INFO - Handshake was successful!
+2023-11-15 18:09:32,600 - INFO - Received successfully Master Key and IV.
+2023-11-15 18:09:32,790 - INFO - Received the encrypted data
+2023-11-15 18:09:32,921 - INFO - Trace was stored successfully
+2023-11-15 18:10:56,400 - INFO - Accepted connection from ('127.0.0.1', 56436)
+2023-11-15 18:10:56,405 - INFO - Handshake was successful!
+2023-11-15 18:10:56,507 - INFO - Received successfully Master Key and IV.
+2023-11-15 18:10:56,769 - INFO - Received the encrypted data
+2023-11-15 18:10:57,013 - INFO - Trace was stored successfully
+2023-11-15 18:10:57,774 - INFO - Accepted connection from ('127.0.0.1', 56443)
+2023-11-15 18:10:57,780 - INFO - Handshake was successful!
+2023-11-15 18:10:57,865 - INFO - Received successfully Master Key and IV.
+2023-11-15 18:10:58,121 - INFO - Received the encrypted data
+2023-11-15 18:10:58,408 - INFO - Trace was stored successfully
+2023-11-15 18:11:41,559 - INFO - Accepted connection from ('127.0.0.1', 56554)
+2023-11-15 18:11:41,565 - INFO - Handshake was successful!
+2023-11-15 18:11:41,647 - INFO - Received successfully Master Key and IV.
+2023-11-15 18:11:42,034 - INFO - Received the encrypted data
+2023-11-15 18:11:42,240 - INFO - Trace was stored successfully
+2023-11-17 23:29:30,357 - INFO - Accepted connection from ('127.0.0.1', 55185)
+2023-11-17 23:29:30,362 - INFO - Handshake was successful!
+2023-11-17 23:29:30,568 - INFO - Received successfully Master Key and IV.
+2023-11-17 23:29:30,651 - INFO - Received the encrypted data
+2023-11-17 23:29:30,848 - INFO - Trace was stored successfully
+2023-11-17 23:29:31,665 - INFO - Accepted connection from ('127.0.0.1', 55186)
+2023-11-17 23:29:31,665 - INFO - Handshake was successful!
+2023-11-17 23:29:31,723 - INFO - Received successfully Master Key and IV.
+2023-11-17 23:29:31,906 - INFO - Received the encrypted data
+2023-11-17 23:29:32,029 - INFO - Trace was stored successfully
+2023-11-17 23:29:32,858 - INFO - Accepted connection from ('127.0.0.1', 55187)
+2023-11-17 23:29:32,863 - INFO - Handshake was successful!
+2023-11-17 23:29:32,942 - INFO - Received successfully Master Key and IV.
+2023-11-17 23:29:33,110 - INFO - Received the encrypted data
+2023-11-17 23:29:33,225 - INFO - Trace was stored successfully
+2023-11-17 23:30:05,585 - INFO - Accepted connection from ('127.0.0.1', 55190)
+2023-11-17 23:30:05,589 - INFO - Handshake was successful!
+2023-11-17 23:30:05,636 - INFO - Received successfully Master Key and IV.
+2023-11-17 23:30:05,787 - INFO - Received the encrypted data
+2023-11-17 23:30:05,914 - INFO - Trace was stored successfully
+2023-11-17 23:30:06,601 - INFO - Accepted connection from ('127.0.0.1', 55191)
+2023-11-17 23:30:06,604 - INFO - Handshake was successful!
+2023-11-17 23:30:06,653 - INFO - Received successfully Master Key and IV.
+2023-11-17 23:30:06,914 - INFO - Received the encrypted data
+2023-11-17 23:30:07,024 - INFO - Trace was stored successfully
+2023-11-17 23:30:07,648 - INFO - Accepted connection from ('127.0.0.1', 55192)
+2023-11-17 23:30:07,648 - INFO - Handshake was successful!
+2023-11-17 23:30:07,708 - INFO - Received successfully Master Key and IV.
+2023-11-17 23:30:07,857 - INFO - Received the encrypted data
+2023-11-17 23:30:07,986 - INFO - Trace was stored successfully
