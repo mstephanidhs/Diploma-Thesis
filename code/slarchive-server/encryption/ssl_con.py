@@ -134,12 +134,6 @@ class SSLEncryptionClient:
     self.send_chunk_encrypted_data(total_data_size, encrypted_data, chunk_size)
       
     logging.info("Encrypted data were sent successfully.")
-    
-    last_item_bytes = self.filename_bytes()
-    encrypted_last_item = cipher.encrypt(last_item_bytes)
-    self.ssl_socket.send(encrypted_last_item)
-    
-    logging.info("Filename encrypted and sent successfully.")
       
   def run(self):
     try:

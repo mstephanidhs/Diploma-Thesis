@@ -112,12 +112,6 @@ class SSLServer:
     
     return master_key, iv
   
-  def decrypt_filename(self, encrypted_filename, cipher):
-    encrypted_filename_bytes = cipher.decrypt(encrypted_filename)
-    filename = encrypted_filename_bytes.decode('utf-8')
-    
-    return filename
-  
   def decrypt_total_data_size(self, encrypted_total_size, cipher):
     total_size_bytes = cipher.decrypt(encrypted_total_size)
     total_data_size = int.from_bytes(total_size_bytes, byteorder='big')
@@ -159,9 +153,10 @@ class SSLServer:
     
     return restored_trace
   
-  def store_trace(self, restored_trace, filename):
+  def store_trace(self, restored_trace):
     # Store the different path that will create the final path to store the trace
     path = []
+    filename_path = []
     
     # Current year
     current_year = datetime.now().year
@@ -186,6 +181,23 @@ class SSLServer:
     
     # Create directories if they don't exist
     os.makedirs(final_path, exist_ok=True)
+    
+    filename_path.append(restored_trace.stats.network)
+    filename_path.append(restored_trace.stats.station)
+    filename_path.append(restored_trace.stats.location)
+    filename_path.append(restored_trace.stats.channel)
+    filename_path.append(restored_trace.stats.mseed.dataquality)
+    filename_path.append(str(current_year))
+    
+    # Get the current date
+    current_date = datetime.now()
+    
+    # Format the date to include the day of the year with zero-padding
+    day_of_year_padded = current_date.strftime("%j")
+    filename_path.append(day_of_year_padded)
+    
+    # Create the actual filename
+    filename = ".".join(filename_path)
     
     # Append the filename to the final path
     final_path = os.path.join(final_path, filename)
@@ -231,10 +243,7 @@ class SSLServer:
       
       restored_trace = self.decrypt_received_data(master_key, iv, received_data)
       
-      encrypted_filename = ssl_socket.recv(4096)
-      filename = self.decrypt_filename(encrypted_filename, cipher)
-      
-      self.store_trace(restored_trace, filename)
+      self.store_trace(restored_trace)
 
     except SSL.Error as e:
       logging.error(f'TLS handshake error: {e}', exc_info=True)
