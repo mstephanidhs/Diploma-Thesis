@@ -75,3 +75,62 @@
 2023-11-13 21:57:43,884 - INFO - Received successfully Master Key and IV.
 2023-11-13 21:57:44,042 - INFO - Received the encrypted data
 2023-11-13 21:57:44,169 - INFO - Trace was stored successfully
+2023-11-18 11:46:33,798 - INFO - Accepted connection from ('127.0.0.1', 62540)
+2023-11-18 11:46:33,814 - INFO - Handshake was successful!
+2023-11-18 11:46:33,925 - INFO - Received successfully Master Key and IV.
+2023-11-18 11:46:34,097 - INFO - Received the encrypted data
+2023-11-18 11:46:34,321 - INFO - Trace was stored successfully
+2023-11-18 11:46:42,292 - INFO - Accepted connection from ('127.0.0.1', 62558)
+2023-11-18 11:46:42,300 - INFO - Handshake was successful!
+2023-11-18 11:46:42,354 - INFO - Received successfully Master Key and IV.
+2023-11-18 11:46:42,503 - INFO - Received the encrypted data
+2023-11-18 11:46:42,637 - INFO - Trace was stored successfully
+2023-11-18 11:46:48,177 - INFO - Accepted connection from ('127.0.0.1', 62571)
+2023-11-18 11:46:48,177 - INFO - Handshake was successful!
+2023-11-18 11:46:48,245 - INFO - Received successfully Master Key and IV.
+2023-11-18 11:46:48,404 - INFO - Received the encrypted data
+2023-11-18 11:46:48,610 - INFO - Trace was stored successfully
+2023-11-18 11:46:52,431 - INFO - Accepted connection from ('127.0.0.1', 62581)
+2023-11-18 11:46:52,431 - INFO - Handshake was successful!
+2023-11-18 11:46:52,495 - INFO - Received successfully Master Key and IV.
+2023-11-18 11:46:52,675 - INFO - Received the encrypted data
+2023-11-18 11:46:52,812 - INFO - Trace was stored successfully
+2023-11-18 11:47:08,885 - INFO - Accepted connection from ('127.0.0.1', 62601)
+2023-11-18 11:47:08,900 - INFO - Handshake was successful!
+2023-11-18 11:47:08,952 - INFO - Received successfully Master Key and IV.
+2023-11-18 11:47:09,113 - INFO - Received the encrypted data
+2023-11-18 11:47:09,230 - INFO - Trace was stored successfully
+2023-11-18 11:47:12,136 - INFO - Accepted connection from ('127.0.0.1', 62611)
+2023-11-18 11:47:12,136 - INFO - Handshake was successful!
+2023-11-18 11:47:12,189 - INFO - Received successfully Master Key and IV.
+2023-11-18 11:47:12,354 - INFO - Received the encrypted data
+2023-11-18 11:47:12,492 - INFO - Trace was stored successfully
+2023-11-18 11:47:16,390 - INFO - Accepted connection from ('127.0.0.1', 62619)
+2023-11-18 11:47:16,395 - INFO - Handshake was successful!
+2023-11-18 11:47:16,447 - INFO - Received successfully Master Key and IV.
+2023-11-18 11:47:16,625 - INFO - Received the encrypted data
+2023-11-18 11:47:16,756 - INFO - Trace was stored successfully
+2023-11-18 11:47:17,689 - INFO - Accepted connection from ('127.0.0.1', 62630)
+2023-11-18 11:47:17,697 - INFO - Handshake was successful!
+2023-11-18 11:47:17,739 - INFO - Received successfully Master Key and IV.
+2023-11-18 11:47:17,918 - INFO - Received the encrypted data
+2023-11-18 11:47:18,038 - INFO - Trace was stored successfully
+2023-11-18 11:47:27,747 - INFO - Accepted connection from ('127.0.0.1', 62653)
+2023-11-18 11:47:27,747 - INFO - Handshake was successful!
+2023-11-18 11:47:27,811 - INFO - Received successfully Master Key and IV.
+2023-11-18 11:47:28,120 - INFO - Received the encrypted data
+2023-11-18 11:47:28,298 - INFO - Trace was stored successfully
+2023-11-18 11:47:33,687 - INFO - Accepted connection from ('127.0.0.1', 62666)
+2023-11-18 11:47:33,687 - INFO - Handshake was successful!
+2023-11-18 11:47:33,745 - INFO - Received successfully Master Key and IV.
+2023-11-18 11:47:33,980 - INFO - Received the encrypted data
+2023-11-18 11:47:34,111 - INFO - Trace was stored successfully
+2023-11-18 11:47:34,876 - INFO - Accepted connection from ('127.0.0.1', 62675)
+2023-11-18 11:47:34,892 - INFO - Handshake was successful!
+2023-11-18 11:47:34,928 - INFO - Received successfully Master Key and IV.
+2023-11-18 11:47:35,104 - INFO - Received the encrypted data
+2023-11-18 11:47:35,208 - INFO - Trace was stored successfully
+2023-11-18 11:47:36,006 - WARNING - Rejected connection from ('127.0.0.1', 62682) due to excessive requests.
+2023-11-18 11:47:36,753 - WARNING - Rejected connection from ('127.0.0.1', 62691)
+2023-11-18 11:47:37,515 - WARNING - Rejected connection from ('127.0.0.1', 62697)
+2023-11-18 11:47:38,161 - WARNING - Rejected connection from ('127.0.0.1', 62698)
