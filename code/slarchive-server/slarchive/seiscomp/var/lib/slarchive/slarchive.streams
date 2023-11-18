@@ -5,10 +5,7 @@
 # specifying the data acquired from a specific seismic station
 # ZW ITSC EHZ.D
 # HP UPR HHZ.D
+# HP UPR HH?.D
 HP UPR HH*.D
-HP UPR HH?.D
-
-
-
 
 ----  End example file -----
