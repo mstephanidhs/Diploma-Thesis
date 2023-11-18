@@ -1,0 +1,180 @@
+2023/11/18 16:31:05 [notice/Application] Starting scmaster 
+2023/11/18 16:31:05 [notice/Application]   Framework   : 4.6.0 Release
+2023/11/18 16:31:05 [notice/Application]   API Version : 14.2.0
+2023/11/18 16:31:05 [notice/Application]   Version     : GIT HEAD: 
+Compiler: c++ (Ubuntu 9.3.0-10ubuntu2) 9.3.0
+Build system: Linux 5.4.0-29-generic
+OS: Ubuntu 20.04 LTS / Linux
+2023/11/18 16:31:05 [error/MYSQL] Connect to sysop:******@gisola-db:3306/seiscomp failed: Access denied for user 'sysop'@'172.19.0.3' (using password: YES)
+2023/11/18 16:31:05 [error/dbstore] Database check... connection refused, retry
+2023/11/18 16:31:05 [error/dbstore] Database check... connection not available, abort
+2023/11/18 16:31:05 [error/MASTER] Failed to initialize message processor interface 'dbstore'
+2023/11/18 16:31:05 [notice/Application] Shutdown
+2023/11/18 16:36:30 [notice/Application] Starting scmaster 
+2023/11/18 16:36:30 [notice/Application]   Framework   : 4.6.0 Release
+2023/11/18 16:36:30 [notice/Application]   API Version : 14.2.0
+2023/11/18 16:36:30 [notice/Application]   Version     : GIT HEAD: 
+Compiler: c++ (Ubuntu 9.3.0-10ubuntu2) 9.3.0
+Build system: Linux 5.4.0-29-generic
+OS: Ubuntu 20.04 LTS / Linux
+2023/11/18 16:36:30 [error/MYSQL] Connect to sysop:******@gisola-db:3306/seiscomp failed: Access denied for user 'sysop'@'172.19.0.3' (using password: YES)
+2023/11/18 16:36:30 [error/dbstore] Database check... connection refused, retry
+2023/11/18 16:36:30 [error/dbstore] Database check... connection not available, abort
+2023/11/18 16:36:30 [error/MASTER] Failed to initialize message processor interface 'dbstore'
+2023/11/18 16:36:30 [notice/Application] Shutdown
+2023/11/18 16:38:21 [notice/Application] Starting scmaster 
+2023/11/18 16:38:21 [notice/Application]   Framework   : 4.6.0 Release
+2023/11/18 16:38:21 [notice/Application]   API Version : 14.2.0
+2023/11/18 16:38:21 [notice/Application]   Version     : GIT HEAD: 
+Compiler: c++ (Ubuntu 9.3.0-10ubuntu2) 9.3.0
+Build system: Linux 5.4.0-29-generic
+OS: Ubuntu 20.04 LTS / Linux
+2023/11/18 16:38:21 [error/MYSQL] Connect to sysop:******@gisola-db:3306/seiscomp failed: Access denied for user 'sysop'@'172.19.0.3' (using password: YES)
+2023/11/18 16:38:21 [error/dbstore] Database check... connection refused, retry
+2023/11/18 16:38:21 [error/dbstore] Database check... connection not available, abort
+2023/11/18 16:38:21 [error/MASTER] Failed to initialize message processor interface 'dbstore'
+2023/11/18 16:38:21 [notice/Application] Shutdown
+2023/11/18 16:39:27 [notice/Application] Starting scmaster 
+2023/11/18 16:39:27 [notice/Application]   Framework   : 4.6.0 Release
+2023/11/18 16:39:27 [notice/Application]   API Version : 14.2.0
+2023/11/18 16:39:27 [notice/Application]   Version     : GIT HEAD: 
+Compiler: c++ (Ubuntu 9.3.0-10ubuntu2) 9.3.0
+Build system: Linux 5.4.0-29-generic
+OS: Ubuntu 20.04 LTS / Linux
+2023/11/18 16:39:27 [error/MYSQL] Connect to sysop:******@gisola-db:3306/seiscomp failed: Access denied for user 'sysop'@'172.19.0.3' (using password: YES)
+2023/11/18 16:39:27 [error/dbstore] Database check... connection refused, retry
+2023/11/18 16:39:27 [error/dbstore] Database check... connection not available, abort
+2023/11/18 16:39:27 [error/MASTER] Failed to initialize message processor interface 'dbstore'
+2023/11/18 16:39:27 [notice/Application] Shutdown
+2023/11/18 16:44:15 [notice/Application] Starting scmaster 
+2023/11/18 16:44:15 [notice/Application]   Framework   : 4.6.0 Release
+2023/11/18 16:44:15 [notice/Application]   API Version : 14.2.0
+2023/11/18 16:44:15 [notice/Application]   Version     : GIT HEAD: 
+Compiler: c++ (Ubuntu 9.3.0-10ubuntu2) 9.3.0
+Build system: Linux 5.4.0-29-generic
+OS: Ubuntu 20.04 LTS / Linux
+2023/11/18 16:44:15 [error/MYSQL] Connect to sysop:******@gisola-db:3306/seiscomp failed: Access denied for user 'sysop'@'172.19.0.3' (using password: YES)
+2023/11/18 16:44:15 [error/dbstore] Database check... connection refused, retry
+2023/11/18 16:44:15 [error/dbstore] Database check... connection not available, abort
+2023/11/18 16:44:15 [error/MASTER] Failed to initialize message processor interface 'dbstore'
+2023/11/18 16:44:15 [notice/Application] Shutdown
+2023/11/18 16:48:22 [notice/Application] Starting scmaster 
+2023/11/18 16:48:22 [notice/Application]   Framework   : 4.6.0 Release
+2023/11/18 16:48:22 [notice/Application]   API Version : 14.2.0
+2023/11/18 16:48:22 [notice/Application]   Version     : GIT HEAD: 
+Compiler: c++ (Ubuntu 9.3.0-10ubuntu2) 9.3.0
+Build system: Linux 5.4.0-29-generic
+OS: Ubuntu 20.04 LTS / Linux
+2023/11/18 16:48:22 [error/MYSQL] Connect to sysop:******@gisola-db:3306/seiscomp failed: Access denied for user 'sysop'@'172.19.0.3' (using password: YES)
+2023/11/18 16:48:22 [error/dbstore] Database check... connection refused, retry
+2023/11/18 16:48:22 [error/dbstore] Database check... connection not available, abort
+2023/11/18 16:48:22 [error/MASTER] Failed to initialize message processor interface 'dbstore'
+2023/11/18 16:48:22 [notice/Application] Shutdown
+2023/11/18 16:53:19 [notice/Application] Starting scmaster 
+2023/11/18 16:53:19 [notice/Application]   Framework   : 4.6.0 Release
+2023/11/18 16:53:19 [notice/Application]   API Version : 14.2.0
+2023/11/18 16:53:19 [notice/Application]   Version     : GIT HEAD: 
+Compiler: c++ (Ubuntu 9.3.0-10ubuntu2) 9.3.0
+Build system: Linux 5.4.0-29-generic
+OS: Ubuntu 20.04 LTS / Linux
+2023/11/18 16:53:19 [error/MYSQL] Connect to sysop:******@gisola-db:3306/seiscomp failed: Access denied for user 'sysop'@'172.19.0.3' (using password: YES)
+2023/11/18 16:53:19 [error/dbstore] Database check... connection refused, retry
+2023/11/18 16:53:19 [error/dbstore] Database check... connection not available, abort
+2023/11/18 16:53:19 [error/MASTER] Failed to initialize message processor interface 'dbstore'
+2023/11/18 16:53:19 [notice/Application] Shutdown
+2023/11/18 16:56:58 [notice/Application] Starting scmaster 
+2023/11/18 16:56:58 [notice/Application]   Framework   : 4.6.0 Release
+2023/11/18 16:56:58 [notice/Application]   API Version : 14.2.0
+2023/11/18 16:56:58 [notice/Application]   Version     : GIT HEAD: 
+Compiler: c++ (Ubuntu 9.3.0-10ubuntu2) 9.3.0
+Build system: Linux 5.4.0-29-generic
+OS: Ubuntu 20.04 LTS / Linux
+2023/11/18 16:56:58 [error/MYSQL] Connect to sysop:******@gisola-db:3306/seiscomp failed: Access denied for user 'sysop'@'172.19.0.3' (using password: YES)
+2023/11/18 16:56:58 [error/dbstore] Database check... connection refused, retry
+2023/11/18 16:56:58 [error/dbstore] Database check... connection not available, abort
+2023/11/18 16:56:58 [error/MASTER] Failed to initialize message processor interface 'dbstore'
+2023/11/18 16:56:58 [notice/Application] Shutdown
+2023/11/18 17:04:52 [notice/Application] Starting scmaster 
+2023/11/18 17:04:52 [notice/Application]   Framework   : 4.6.0 Release
+2023/11/18 17:04:52 [notice/Application]   API Version : 14.2.0
+2023/11/18 17:04:52 [notice/Application]   Version     : GIT HEAD: 
+Compiler: c++ (Ubuntu 9.3.0-10ubuntu2) 9.3.0
+Build system: Linux 5.4.0-29-generic
+OS: Ubuntu 20.04 LTS / Linux
+2023/11/18 17:04:52 [error/MYSQL] Connect to sysop:******@gisola-db:3306/seiscomp failed: Access denied for user 'sysop'@'172.19.0.3' (using password: YES)
+2023/11/18 17:04:52 [error/dbstore] Database check... connection refused, retry
+2023/11/18 17:04:52 [error/dbstore] Database check... connection not available, abort
+2023/11/18 17:04:52 [error/MASTER] Failed to initialize message processor interface 'dbstore'
+2023/11/18 17:04:52 [notice/Application] Shutdown
+2023/11/18 17:06:19 [notice/Application] Starting scmaster 
+2023/11/18 17:06:19 [notice/Application]   Framework   : 4.6.0 Release
+2023/11/18 17:06:19 [notice/Application]   API Version : 14.2.0
+2023/11/18 17:06:19 [notice/Application]   Version     : GIT HEAD: 
+Compiler: c++ (Ubuntu 9.3.0-10ubuntu2) 9.3.0
+Build system: Linux 5.4.0-29-generic
+OS: Ubuntu 20.04 LTS / Linux
+2023/11/18 17:06:19 [error/MYSQL] Connect to sysop:******@gisola-db:3306/seiscomp failed: Access denied for user 'sysop'@'172.19.0.3' (using password: YES)
+2023/11/18 17:06:19 [error/dbstore] Database check... connection refused, retry
+2023/11/18 17:06:19 [error/dbstore] Database check... connection not available, abort
+2023/11/18 17:06:19 [error/MASTER] Failed to initialize message processor interface 'dbstore'
+2023/11/18 17:06:19 [notice/Application] Shutdown
+2023/11/18 17:15:30 [notice/Application] Starting scmaster 
+2023/11/18 17:15:30 [notice/Application]   Framework   : 4.6.0 Release
+2023/11/18 17:15:30 [notice/Application]   API Version : 14.2.0
+2023/11/18 17:15:30 [notice/Application]   Version     : GIT HEAD: 
+Compiler: c++ (Ubuntu 9.3.0-10ubuntu2) 9.3.0
+Build system: Linux 5.4.0-29-generic
+OS: Ubuntu 20.04 LTS / Linux
+2023/11/18 17:15:30 [error/MYSQL] Connect to sysop:******@gisola-db:3306/seiscomp failed: Access denied for user 'sysop'@'172.19.0.3' (using password: YES)
+2023/11/18 17:15:30 [error/dbstore] Database check... connection refused, retry
+2023/11/18 17:15:30 [error/dbstore] Database check... connection not available, abort
+2023/11/18 17:15:30 [error/MASTER] Failed to initialize message processor interface 'dbstore'
+2023/11/18 17:15:30 [notice/Application] Shutdown
+2023/11/18 17:19:34 [notice/Application] Starting scmaster 
+2023/11/18 17:19:34 [notice/Application]   Framework   : 4.6.0 Release
+2023/11/18 17:19:34 [notice/Application]   API Version : 14.2.0
+2023/11/18 17:19:34 [notice/Application]   Version     : GIT HEAD: 
+Compiler: c++ (Ubuntu 9.3.0-10ubuntu2) 9.3.0
+Build system: Linux 5.4.0-29-generic
+OS: Ubuntu 20.04 LTS / Linux
+2023/11/18 17:19:34 [error/MYSQL] Connect to sysop:******@gisola-db:3306/seiscomp failed: Access denied for user 'sysop'@'172.19.0.3' (using password: YES)
+2023/11/18 17:19:34 [error/dbstore] Database check... connection refused, retry
+2023/11/18 17:19:34 [error/dbstore] Database check... connection not available, abort
+2023/11/18 17:19:34 [error/MASTER] Failed to initialize message processor interface 'dbstore'
+2023/11/18 17:19:34 [notice/Application] Shutdown
+2023/11/18 17:24:29 [notice/Application] Starting scmaster 
+2023/11/18 17:24:29 [notice/Application]   Framework   : 4.6.0 Release
+2023/11/18 17:24:29 [notice/Application]   API Version : 14.2.0
+2023/11/18 17:24:29 [notice/Application]   Version     : GIT HEAD: 
+Compiler: c++ (Ubuntu 9.3.0-10ubuntu2) 9.3.0
+Build system: Linux 5.4.0-29-generic
+OS: Ubuntu 20.04 LTS / Linux
+2023/11/18 17:24:29 [error/MYSQL] Connect to sysop:******@gisola-db:3306/seiscomp failed: Access denied for user 'sysop'@'172.19.0.3' (using password: YES)
+2023/11/18 17:24:29 [error/dbstore] Database check... connection refused, retry
+2023/11/18 17:24:29 [error/dbstore] Database check... connection not available, abort
+2023/11/18 17:24:29 [error/MASTER] Failed to initialize message processor interface 'dbstore'
+2023/11/18 17:24:29 [notice/Application] Shutdown
+2023/11/18 17:32:24 [notice/Application] Starting scmaster 
+2023/11/18 17:32:24 [notice/Application]   Framework   : 4.6.0 Release
+2023/11/18 17:32:24 [notice/Application]   API Version : 14.2.0
+2023/11/18 17:32:24 [notice/Application]   Version     : GIT HEAD: 
+Compiler: c++ (Ubuntu 9.3.0-10ubuntu2) 9.3.0
+Build system: Linux 5.4.0-29-generic
+OS: Ubuntu 20.04 LTS / Linux
+2023/11/18 17:32:24 [error/MYSQL] Connect to sysop:******@gisola-db:3306/seiscomp failed: Access denied for user 'sysop'@'172.19.0.3' (using password: YES)
+2023/11/18 17:32:24 [error/dbstore] Database check... connection refused, retry
+2023/11/18 17:32:24 [error/dbstore] Database check... connection not available, abort
+2023/11/18 17:32:24 [error/MASTER] Failed to initialize message processor interface 'dbstore'
+2023/11/18 17:32:24 [notice/Application] Shutdown
+2023/11/18 17:40:13 [notice/Application] Starting scmaster 
+2023/11/18 17:40:13 [notice/Application]   Framework   : 4.6.0 Release
+2023/11/18 17:40:13 [notice/Application]   API Version : 14.2.0
+2023/11/18 17:40:13 [notice/Application]   Version     : GIT HEAD: 
+Compiler: c++ (Ubuntu 9.3.0-10ubuntu2) 9.3.0
+Build system: Linux 5.4.0-29-generic
+OS: Ubuntu 20.04 LTS / Linux
+2023/11/18 17:40:13 [error/MYSQL] Connect to sysop:******@gisola-db:3306/seiscomp failed: Access denied for user 'sysop'@'172.19.0.3' (using password: YES)
+2023/11/18 17:40:13 [error/dbstore] Database check... connection refused, retry
+2023/11/18 17:40:13 [error/dbstore] Database check... connection not available, abort
+2023/11/18 17:40:13 [error/MASTER] Failed to initialize message processor interface 'dbstore'
+2023/11/18 17:40:13 [notice/Application] Shutdown

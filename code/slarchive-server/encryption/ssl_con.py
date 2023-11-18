@@ -49,7 +49,6 @@ class SSLEncryptionClient:
   
   def encrypt_data(self, master_key, init_value):
     script = DataEncryption(self.source_file, master_key, init_value)
-    script.configure_logging()
     encrypted_data = script.run()
     
     return encrypted_data
@@ -179,7 +178,7 @@ if __name__ == '__main__':
     logging.warning('Usage: python ssl_con.py source_file')
     
   source_file = sys.argv[1]
-  # source_file = '.\\..\\archive\\2023\\ZW\\ITSC\\EHN.D\\ZW.ITSC.00.EHN.D.2023.295'
+  # source_file = '.\\..\\archive\\2023\\ZW\\ITSC\\EHN.D\\ZW.ITSC.00.EHE.D.2023.295'
   
   logging.basicConfig(filename='.\\logs\\ssl_connection.log', level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
   
