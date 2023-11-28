@@ -11,6 +11,7 @@ from collections import defaultdict
 from threading import Lock
 
 from processor import TraceProcessor
+from aes_gcm import InvalidTagException
 
 class SSLServer:
   def __init__(self, host, port, allowed_ips_file, max_requests=10, time_window_seconds=60, token_bucket_capacity=20, token_fill_rate=2):
@@ -291,9 +292,11 @@ class SSLServer:
       
       received_data = self.receive_encrypted_data(total_data_size, chunk_size, ssl_socket)
       
-      restored_trace = self.decrypt_received_data(master_key, iv, received_data)
-      
-      self.store_trace(restored_trace)
+      try:
+        restored_trace = self.decrypt_received_data(master_key, iv, received_data)
+        self.store_trace(restored_trace)
+      except InvalidTagException as ite:
+        logging.error(f'Invalid authentication tag: {ite}')
 
     except SSL.Error as e:
       logging.error(f'TLS handshake error: {e}', exc_info=True)
