@@ -127,3 +127,43 @@ OpenSSL.SSL.SysCallError: (-1, 'Unexpected EOF')
 2023-11-18 19:46:17,430 - INFO - Received successfully Master Key and IV.
 2023-11-18 19:46:17,589 - INFO - Received the encrypted data
 2023-11-18 19:46:17,698 - INFO - Trace was stored successfully
+2023-11-28 21:50:47,834 - INFO - Accepted connection from ('127.0.0.1', 62451)
+2023-11-28 21:50:47,871 - INFO - Handshake was successful!
+2023-11-28 21:50:48,171 - INFO - Received successfully Master Key and IV.
+2023-11-28 21:50:48,237 - INFO - Received the encrypted data
+2023-11-28 21:50:48,511 - INFO - Trace was stored successfully
+2023-11-28 21:50:49,503 - INFO - Accepted connection from ('127.0.0.1', 62453)
+2023-11-28 21:50:49,509 - INFO - Handshake was successful!
+2023-11-28 21:50:49,574 - INFO - Received successfully Master Key and IV.
+2023-11-28 21:50:49,798 - INFO - Received the encrypted data
+2023-11-28 21:50:49,976 - INFO - Trace was stored successfully
+2023-11-28 21:50:50,863 - INFO - Accepted connection from ('127.0.0.1', 62454)
+2023-11-28 21:50:50,865 - INFO - Handshake was successful!
+2023-11-28 21:50:50,958 - INFO - Received successfully Master Key and IV.
+2023-11-28 21:50:51,158 - INFO - Received the encrypted data
+2023-11-28 21:50:51,296 - INFO - Trace was stored successfully
+2023-11-28 21:50:52,208 - INFO - Accepted connection from ('127.0.0.1', 62455)
+2023-11-28 21:50:52,214 - INFO - Handshake was successful!
+2023-11-28 21:50:52,278 - INFO - Received successfully Master Key and IV.
+2023-11-28 21:50:52,495 - INFO - Received the encrypted data
+2023-11-28 21:50:52,667 - INFO - Trace was stored successfully
+2023-11-28 21:50:53,593 - INFO - Accepted connection from ('127.0.0.1', 62456)
+2023-11-28 21:50:53,602 - INFO - Handshake was successful!
+2023-11-28 21:50:53,671 - INFO - Received successfully Master Key and IV.
+2023-11-28 21:50:53,922 - INFO - Received the encrypted data
+2023-11-28 21:50:54,073 - INFO - Trace was stored successfully
+2023-11-28 21:50:55,064 - INFO - Accepted connection from ('127.0.0.1', 62457)
+2023-11-28 21:50:55,077 - INFO - Handshake was successful!
+2023-11-28 21:50:55,157 - INFO - Received successfully Master Key and IV.
+2023-11-28 21:50:55,426 - INFO - Received the encrypted data
+2023-11-28 21:50:55,613 - INFO - Trace was stored successfully
+2023-11-28 21:50:56,543 - INFO - Accepted connection from ('127.0.0.1', 62458)
+2023-11-28 21:50:56,552 - INFO - Handshake was successful!
+2023-11-28 21:50:56,613 - INFO - Received successfully Master Key and IV.
+2023-11-28 21:50:56,914 - INFO - Received the encrypted data
+2023-11-28 21:50:57,093 - INFO - Trace was stored successfully
+2023-11-28 21:50:57,968 - INFO - Accepted connection from ('127.0.0.1', 62459)
+2023-11-28 21:50:57,975 - INFO - Handshake was successful!
+2023-11-28 21:50:58,045 - INFO - Received successfully Master Key and IV.
+2023-11-28 21:50:58,255 - INFO - Received the encrypted data
+2023-11-28 21:50:58,404 - INFO - Trace was stored successfully
