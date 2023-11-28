@@ -1,7 +1,7 @@
 import numpy as np
 import json
 
-from aes_gcm import AES_GCM
+from aes_gcm import AES_GCM, InvalidTagException
 from exception.decryption_error import DecryptionError
 from exception.invalid_data_type_error import InvalidDataTypeError
 
@@ -50,7 +50,7 @@ class TraceProcessor:
     # Create an instance of AES_GCM with the master_key
     my_gcm = AES_GCM(self.master_key)
     
-    # Encrypt the combined trace data, timed & stats
+    # Encrypt the combined trace data & stats
     encrypted_trace, auth_tag = my_gcm.encrypt(self.init_value, trace_combined)
     
     # Convert auth_tag to a byte representation with a length of 16 bytes and a big-endian byte order
@@ -66,12 +66,17 @@ class TraceProcessor:
     
     # Extract the auth tag that is stored at the end of the encrypted_trace
     auth_tag_bytes = encrypted_trace[-16:]
-    
+  
     # Convert the auth tag back to an integer
     auth_tag = int.from_bytes(auth_tag_bytes, byteorder='big')
     
-    # Decrypt the data (excluding the auth tag)
-    return my_gcm.decrypt(self.init_value, encrypted_trace[:-16], auth_tag)
+    try:
+      # Decrypt the data (excluding the auth tag)
+      return my_gcm.decrypt(self.init_value, encrypted_trace[:-16], auth_tag)
+    except DecryptionError as e:
+      # Handle decryption error
+      raise InvalidTagException(f'Decryption failed: {e}')
+      
   
   def split_trace(self, combined_data):
     parts = combined_data.split(self.delimiter)
