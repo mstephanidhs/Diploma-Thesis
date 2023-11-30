@@ -3,6 +3,10 @@ import logging
 import sys
 import os
 
+import bcrypt
+
+from time import time
+
 from OpenSSL import SSL
 from Crypto.PublicKey import RSA
 from Crypto.Cipher import PKCS1_OAEP
@@ -17,6 +21,7 @@ class SSLEncryptionClient:
     self.client_socket = None
     self.ssl_socket = None
     self.max_chunk_size = max_chunk_size
+    self.password = 'my_ultra_big_secure_secret'
     
   def connect(self):
     # Create a socket
@@ -79,14 +84,29 @@ class SSLEncryptionClient:
       
       # Update the index to the next chunk
       index += len(chunk)
-      
-  def generate_random_key(self, size):
-    return int.from_bytes(token_bytes(size), byteorder='big')
   
   def filename_bytes(self):
     last_item = os.path.basename(self.source_file)
     last_item_bytes = last_item.encode('utf-8')
     return last_item_bytes
+  
+  def derive_key_and_iv(self, password, nonce):
+    # Encode the password as bytes
+    password_bytes = password.encode('utf-8')
+    # Use bcrypt to derive a key of the desired length
+    derived_key = bcrypt.kdf(password_bytes, salt=nonce, desired_key_bytes=32, rounds=16)
+    
+    # Use the first 16 bytes as the master key and the next 12 bytes as the IV
+    master_key = int.from_bytes(derived_key[:16], byteorder='big')
+    iv = int.from_bytes(derived_key[16:28], byteorder='big')
+    
+    return master_key, iv
+  
+  def generate_unique_nonce(self, size):
+    timestamp_bytes = int(time()).to_bytes(8, byteorder='big')
+    random_bytes = token_bytes(size - 8)
+    
+    return timestamp_bytes + random_bytes
       
   def send_encrypted_data(self):
     # Receive the server's public key
@@ -96,9 +116,15 @@ class SSLEncryptionClient:
     server_key = RSA.import_key(server_public_key)
     
     # Generate a random 128-bit (16-byte) master key
-    master_key = self.generate_random_key(16)
+    # master_key = self.generate_random_key(16)
     # Generate a random 96-bit (12-byte) initialization vector (IV)
-    init_value = self.generate_random_key(12)
+    # init_value = self.generate_random_key(12)
+    
+    # Generate a random nonce for this each session
+    nonce = self.generate_unique_nonce(16)
+    
+    # Derive the master key and IV using a constant secret and the random nonce
+    master_key, init_value = self.derive_key_and_iv(self.password, nonce)
     
     # Convert master_key and init_value to bytes
     master_key_bytes = master_key.to_bytes(16, byteorder='big')
