@@ -115,11 +115,6 @@ class SSLEncryptionClient:
     # Import the server's public key for encryption
     server_key = RSA.import_key(server_public_key)
     
-    # Generate a random 128-bit (16-byte) master key
-    # master_key = self.generate_random_key(16)
-    # Generate a random 96-bit (12-byte) initialization vector (IV)
-    # init_value = self.generate_random_key(12)
-    
     # Generate a random nonce for this each session
     nonce = self.generate_unique_nonce(16)
     
