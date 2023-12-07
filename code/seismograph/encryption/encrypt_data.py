@@ -84,12 +84,12 @@ class DataEncryption:
 
 if __name__ == '__main__':
   
-  if len(sys.argv) != 2:
-    logging.warning('Usage: python ssl_con.py source_file')
-    sys.exit(1)
+  # if len(sys.argv) != 2:
+  #   logging.warning('Usage: python ssl_con.py source_file')
+  #   sys.exit(1)
     
-  source_file = sys.argv[1]
-  # source_file = ".\\..\\archive\\2023\\HP\\UPR\\HHN.D\\HP.UPR..HHN.D.2023.338"
+  # source_file = sys.argv[1]
+  source_file = ".\\..\\archive\\2023\\HP\\UPR\\HHN.D\\HP.UPR..HHN.D.2023.338"
 
   encryption = DataEncryption(source_file)
   master_key, init_value, encrypted_data = encryption.encrypt()
