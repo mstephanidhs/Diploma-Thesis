@@ -1,13 +1,18 @@
 import logging
 import socket
 import subprocess
+import os
 
 from threading import Lock
 from collections import defaultdict
+from dotenv import load_dotenv
 from datetime import datetime
 from OpenSSL import SSL
 from Crypto.PublicKey import RSA
 from Crypto.Cipher import PKCS1_OAEP
+
+# Load environment variables from .env file
+load_dotenv()
 
 # Configure logging
 logging.basicConfig(filename='.\\logs\\ssl_connection.log', level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
@@ -19,6 +24,7 @@ class SSLServer:
     self.port = port
     self.server_socket = None
     self.context = None
+    self.passphrase = self.load_passphrase_from_env()
     
     self.allowed_ips = self.load_allowed_ips(allowed_ips_file)
 
@@ -47,6 +53,14 @@ class SSLServer:
     # Lock to ensure thread-safe token bucket refilling
     self.token_refill_lock = Lock()
     
+  def load_passphrase_from_env(self):
+    passphrase = os.getenv('passphrase')
+    if passphrase:
+      return passphrase
+    else:
+      logging.warning('Passphrase not found in the .env file.')
+      raise ValueError('Passphrase not found in the environment variable.')
+    
   def load_allowed_ips(self, allowed_ips_file):
     try:
       with open(allowed_ips_file, 'r') as file:
@@ -66,7 +80,13 @@ class SSLServer:
     self.context = SSL.Context(SSL.SSLv23_METHOD)    
     # Execute the below command in order to produce the server-certs needed
     # openssl req -x509 -nodes -newkey rsa:2048 -keyout server-key.pem -out server-cert.pem -days 365
-    self.context.use_privatekey_file('.\\..\\server_cred\\server-key.pem')
+    # openssl rsa -aes256 -in server-key.pem -out server-key-encrypted.pem
+    # Use the encrypted private key file
+    self.context.use_privatekey_file('.\\..\\server_cred\\server-key-encrypted.pem')
+    
+    # Set the passphrase for the private key
+    self.context.set_passwd_cb(lambda *args, **kwargs: self.passphrase.encode())
+    
     self.context.use_certificate_file('.\\..\\server_cred\\server-cert.pem')
     
   def is_client_allowed(self, client_address):
