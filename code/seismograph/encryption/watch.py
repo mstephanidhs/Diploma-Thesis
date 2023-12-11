@@ -38,7 +38,7 @@ class Handler(FileSystemEventHandler):
   def on_modified(self, event):
     
     # Location of the script to be executed
-    encryptionScript = ".\\ssl_con.py"
+    encryptionScript = ".\\encrypt_data.py"
     
     if self.is_empty(event.src_path):
       return
