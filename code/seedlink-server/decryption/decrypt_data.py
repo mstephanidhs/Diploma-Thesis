@@ -8,7 +8,7 @@ from processor import TraceProcessor
 from aes_gcm import InvalidTagException
 
 # Configure the logging
-logging.basicConfig(filename='.\\logs\\data_encryption.log', level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
+logging.basicConfig(filename='.\\logs\\data_decryption.log', level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
 class DataDecryption:
   
